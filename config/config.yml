@@ -1,0 +1,19 @@
+
+logger:
+    all_level: "DEBUG"
+    stream_level: "DEBUG"
+    file_level: "DEBUG"
+    all_format: "[%(asctime)s] %(levelname)s [%(filename)s, %(lineno)d] %(message)s"
+    date_format: "%Y-%m-%d %H:%M:%S"
+    log_file:
+
+db_info:
+  host: "47.105.207.22"
+  port: "3306"
+  user: "root"
+  password: "jiangnan123."
+  db_name: "school"
+
+case_suite:
+    'login': 'all'
+
