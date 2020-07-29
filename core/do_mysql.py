@@ -1,6 +1,5 @@
 import pymysql
 from pymysql import OperationalError, cursors
-<<<<<<< HEAD
 from core.yamlReader import YamlReader
 from core.my_logger import log
 
@@ -9,20 +8,6 @@ host = yaml_data["db_info"]["host"]
 user = yaml_data["db_info"]["user"]
 password = yaml_data["db_info"]["password"]
 db_name = yaml_data["db_info"]["db_name"]
-=======
-from config.PATH import *
-from core.read_ini import ReadIni
-from core.my_log import log
-from utils.common import *
-
-case_ini = CASE_INI
-
-r = ReadIni()
-host = r.get_ini_value(case_ini, 'DB', 'host')
-user = r.get_ini_value(case_ini, 'DB', 'user')
-password = r.get_ini_value(case_ini, 'DB', 'password')
-db_name = r.get_ini_value(case_ini, 'DB', 'db_name')
->>>>>>> origin/master
 
 
 class DoMysql:
@@ -60,7 +45,6 @@ class DoMysql:
             result = self.cursor.fetchall()  # 获取执行的结果
             log.info('查询数据库 - 成功：{}'.format(sql))
             if len(result) == 0:
-<<<<<<< HEAD
                 log.info('查询数据库 - 返值：{}'.format(None))
                 return None
             elif len(result) == 1:
@@ -68,17 +52,7 @@ class DoMysql:
                 return result[0]
             else:
                 log.info('查询数据库 - 返值：{}'.format(result))
-=======
-                log.info('查询数据库 - 反值：{}'.format(None))
                 return None
-            elif len(result) == 1:
-                log.info('查询数据库 - 反值：{}'.format(result[0]))
-                return result[0]
-            else:
-                log.info('查询数据库 - 反值：{}'.format(result))
->>>>>>> origin/master
-                return result
-
         except Exception as e:
             log.error('查询数据库 - 失败：{}'.format(e))
 

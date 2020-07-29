@@ -1,14 +1,9 @@
 import re
 import openpyxl
 from openpyxl.styles import Font, Alignment, colors
-<<<<<<< HEAD
-from core.my_logger import MyLog
-=======
-from core.my_log import log
->>>>>>> origin/master
+from core.my_logger import log
 import json
 from utils.common import *
-from config.PATH import BASE_CASE_DATA
 
 
 class DoExcel:
@@ -46,21 +41,23 @@ class DoExcel:
                 for col in range(max_col):  # 获取一整行的值
                     value = table.cell(row+2, col+1).value  # 获取每一个单元格的value
                     # log.info('value：{}'.format(value))
-                    if type(value) == str:
-                        case_value.append(value)
-                    elif value is None or value == "" or value == '':
+                    # if type(value) == str:
+                    #     case_value.append(value)
+                    if value is None or value == "" or value == '':
                         case_value.append("")
                     else:
-                        case_value.append(eval(value))
+                        case_value.append(value)
+                    # else:
+                    #     case_value.append(eval(value))
                 # print('case_value：', case_value)
 
                 # 看看一整行数据是否为空
                 b_str = ''
                 for a_idx, a_value in enumerate(case_value):
-                    b_str += a_value
+                    b_str += str(a_value)
                 if re.sub(r'\s+', "", b_str) != "":
                     case_data.append(dict(zip(case_title, case_value)))  # 压缩进 case_data
-                    case_value.clear()
+                    case_value.clear()  # 清空，下次循环才能正常进行
                 elif re.sub(r'\s+', "", b_str) == "":
                     case_value.clear()
                     log.warning('{0} 表 {1} 整行为空，这一整行不纳入获取结果，请知悉。'.format(self.sheet_name, row+2))
@@ -74,17 +71,20 @@ class DoExcel:
                     value = table.cell(row2+1, col2+1).value  # 获取每一个单元格的value
                     # log.info('value：{}'.format(value))
                     # log.info('type_value：{}'.format(type(value)))
-                    if type(value) == str:
-                        case_value.append(value)
-                    elif value is None:
+                    # if type(value) == str:
+                    if value is None or value == "" or value == '':
                         case_value.append("")
                     else:
-                        case_value.append(eval(value))
+                        case_value.append(value)
+                    # elif value is None:
+                    #     case_value.append("")
+                    # else:
+                    #     case_value.append(eval(value))
 
                 # 看看一整行数据是否为空
                 b_str = ''
                 for a_idx, a_value in enumerate(case_value):
-                    b_str += a_value
+                    b_str += str(a_value)
                 if re.sub(r'\s+', "", b_str) != "":
                     case_data.append(dict(zip(case_title, case_value)))  # 压缩进 case_data
                     case_value.clear()
@@ -139,14 +139,16 @@ class DoExcel:
 
 
 if __name__ == '__main__':
-    base_file = r'H:\AutoFramework_Own\API\my_api_autotest\test_data\base_case_data\api_case.xlsx'
+    base_file = r'H:\AutoFramework_Open\AutoTest_API\test_data\base_case_data\api_case.xlsx'
     case_data = DoExcel(base_file, 'login').read_excel()
+    # case_data = json.dumps(case_data, ensure_ascii=False)
     # w.write_excel('home', 'PASS', 2)
     # w.write_excel('home', 'FAIL', 3)
-    # print(type(case_data['data']))
-    print(case_data)
+    # print(type(case_data))
+    # print(case_data)
+    # print(json.dumps(case_data))
 
     # csv_file = r'H:\AutoTest\API\my_api_autotest\test_data\csv_case_data\login.xlsx'
     # csv_data = DoExcel(csv_file).read_excel('login')
     # print(csv_data)
-
+    pass

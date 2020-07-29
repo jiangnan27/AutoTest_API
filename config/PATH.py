@@ -2,9 +2,8 @@ import os
 
 PROJECT_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-CONFIG = os.path.join(PROJECT_PATH, 'config', 'config.ini')
 YAML = os.path.join(PROJECT_PATH, 'config', 'config.yml')
-CASE_INI = os.path.join(PROJECT_PATH, 'case.ini')
+CASE_INI = os.path.join(PROJECT_PATH, 'config', 'case.ini')
 CORE = os.path.join(PROJECT_PATH, 'core')
 TEST_CASE = os.path.join(PROJECT_PATH, 'test_case')
 BASE_CASE_DATA = os.path.join(PROJECT_PATH, 'test_data', 'base_case_data')

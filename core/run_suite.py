@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-from core.my_logger import *
-=======
-from core.my_log import *
->>>>>>> origin/master
 import time
 import unittest
 from HTMLTestRunnerCN import HTMLTestRunner

@@ -1,0 +1,1671 @@
+[2020-07-29 09:44:14] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\base_case_data\api_case.xlsx 的 login 表
+[2020-07-29 09:44:14] INFO [do_excel.py, 37] 读取 login 表 - 全部行的 - 用例数据
+[2020-07-29 09:44:14] INFO [do_excel.py, 94] 读取Excel - 反值：[
+  {
+    "csv_loop": "",
+    "case_id": "get_uuid",
+    "case_name": "获取UUID",
+    "url": "http://47.105.207.22/prod-api/captchaImage",
+    "method": "get",
+    "header": "",
+    "data": "",
+    "files": "",
+    "sql": "",
+    "msg": "成功",
+    "result": "",
+    "proceed": "[${my_setattr(\"uuid\": response[\"uuid\"])}]",
+    "tester": "",
+    "testtime": ""
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "login",
+    "case_name": "get_csv(\"case_name\")",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "",
+    "data": "{\"username\":get_csv(\"username\"),\"password\": get_csv(\"password\"),\"uuid\":\"${my_getattr(\"uuid\")}\"}",
+    "files": "",
+    "sql": "",
+    "msg": "成功",
+    "result": "",
+    "proceed": "",
+    "tester": "",
+    "testtime": ""
+  }
+]
+[2020-07-29 09:44:14] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 09:44:14] INFO [do_excel.py, 37] 读取 login 表 - 全部行的 - 用例数据
+[2020-07-29 09:44:14] INFO [do_excel.py, 94] 读取Excel - 反值：[
+  {
+    "case_name": "错误用户名登录",
+    "userName": "1390001000111",
+    "password": 123456,
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-27 17:44:26"
+  },
+  {
+    "case_name": "错误密码登录",
+    "userName": "13900010001",
+    "password": "df123456",
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-27 17:44:27"
+  },
+  {
+    "case_name": "空用户名登录",
+    "userName": "",
+    "password": 123456,
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-27 17:44:27"
+  },
+  {
+    "case_name": "空密码登录",
+    "userName": "13900010001",
+    "password": "",
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-27 17:44:27"
+  },
+  {
+    "case_name": "正常登录",
+    "userName": "13290021660",
+    "password": "${my_md5(\"123456\")}",
+    "proceed": "[${my_setattr(\"access-token\",response[\"data\"][\"access-token\"])},${my_setattr(\"userId\",response[\"data\"][\"userId\"])}]",
+    "msg": "操作成功",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-27 17:44:27"
+  }
+]
+[2020-07-29 10:09:04] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\base_case_data\api_case.xlsx 的 login 表
+[2020-07-29 10:09:04] INFO [do_excel.py, 37] 读取 login 表 - 全部行的 - 用例数据
+[2020-07-29 10:09:04] INFO [do_excel.py, 94] 读取Excel - 反值：[
+  {
+    "csv_loop": "",
+    "case_id": "get_uuid",
+    "case_name": "获取UUID",
+    "url": "http://47.105.207.22/prod-api/captchaImage",
+    "method": "get",
+    "header": "",
+    "data": "",
+    "files": "",
+    "sql": "",
+    "msg": "成功",
+    "result": "",
+    "proceed": "[${my_setattr(\"uuid\": response[\"uuid\"])}]",
+    "tester": "",
+    "testtime": ""
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "login",
+    "case_name": "get_csv(\"case_name\")",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "",
+    "data": "{\"username\":get_csv(\"username\"),\"password\": get_csv(\"password\"),\"uuid\":get_csv(\"uuid\")}",
+    "files": "",
+    "sql": "",
+    "msg": "成功",
+    "result": "",
+    "proceed": "",
+    "tester": "",
+    "testtime": ""
+  }
+]
+[2020-07-29 10:09:04] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:09:05] INFO [do_excel.py, 37] 读取 login 表 - 全部行的 - 用例数据
+[2020-07-29 10:09:05] INFO [do_excel.py, 94] 读取Excel - 反值：[
+  {
+    "case_name": "错误用户名登录",
+    "userName": "1390001000111",
+    "password": 123456,
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-27 17:44:26"
+  },
+  {
+    "case_name": "错误密码登录",
+    "userName": "13900010001",
+    "password": "df123456",
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-27 17:44:27"
+  },
+  {
+    "case_name": "空用户名登录",
+    "userName": "",
+    "password": 123456,
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-27 17:44:27"
+  },
+  {
+    "case_name": "空密码登录",
+    "userName": "13900010001",
+    "password": "",
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-27 17:44:27"
+  },
+  {
+    "case_name": "正常登录",
+    "userName": "13290021660",
+    "password": "${my_md5(\"123456\")}",
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "[${my_setattr(\"access-token\",response[\"data\"][\"access-token\"])},${my_setattr(\"userId\",response[\"data\"][\"userId\"])}]",
+    "msg": "操作成功",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-27 17:44:27"
+  }
+]
+[2020-07-29 10:10:14] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\base_case_data\api_case.xlsx 的 login 表
+[2020-07-29 10:10:14] INFO [do_excel.py, 37] 读取 login 表 - 全部行的 - 用例数据
+[2020-07-29 10:10:14] INFO [do_excel.py, 94] 读取Excel - 反值：[
+  {
+    "csv_loop": "",
+    "case_id": "get_uuid",
+    "case_name": "获取UUID",
+    "url": "http://47.105.207.22/prod-api/captchaImage",
+    "method": "get",
+    "header": "",
+    "data": "",
+    "files": "",
+    "sql": "",
+    "msg": "成功",
+    "result": "",
+    "proceed": "[${my_setattr(\"uuid\": response[\"uuid\"])}]",
+    "tester": "",
+    "testtime": ""
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "login",
+    "case_name": "get_csv(\"case_name\")",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "",
+    "data": "{\"username\":get_csv(\"username\"),\"password\": get_csv(\"password\"),\"uuid\":get_csv(\"uuid\")}",
+    "files": "",
+    "sql": "",
+    "msg": "成功",
+    "result": "",
+    "proceed": "",
+    "tester": "",
+    "testtime": ""
+  }
+]
+[2020-07-29 10:10:14] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:10:14] INFO [do_excel.py, 37] 读取 login 表 - 全部行的 - 用例数据
+[2020-07-29 10:10:14] INFO [do_excel.py, 94] 读取Excel - 反值：[
+  {
+    "case_name": "错误用户名登录",
+    "username": "1390001000111",
+    "password": 123456,
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-27 17:44:26"
+  },
+  {
+    "case_name": "错误密码登录",
+    "username": "13900010001",
+    "password": "df123456",
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-27 17:44:27"
+  },
+  {
+    "case_name": "空用户名登录",
+    "username": "",
+    "password": 123456,
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-27 17:44:27"
+  },
+  {
+    "case_name": "空密码登录",
+    "username": "13900010001",
+    "password": "",
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-27 17:44:27"
+  },
+  {
+    "case_name": "正常登录",
+    "username": "13290021660",
+    "password": "${my_md5(\"123456\")}",
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "[${my_setattr(\"access-token\",response[\"data\"][\"access-token\"])},${my_setattr(\"userId\",response[\"data\"][\"userId\"])}]",
+    "msg": "操作成功",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-27 17:44:27"
+  }
+]
+[2020-07-29 10:10:14] INFO [get_case_data.py, 73] 获取到的用例数据：[
+  {
+    "csv_loop": "",
+    "case_id": "0001_get_uuid",
+    "case_name": "获取UUID",
+    "url": "http://47.105.207.22/prod-api/captchaImage",
+    "method": "get",
+    "header": "",
+    "data": "",
+    "files": "",
+    "sql": "",
+    "msg": "成功",
+    "result": "",
+    "proceed": "[${my_setattr(\"uuid\": response[\"uuid\"])}]",
+    "tester": "",
+    "testtime": "",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0002_login",
+    "case_name": "错误用户名登录",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "",
+    "data": {
+      "username": "1390001000111",
+      "password": 123456,
+      "uuid": "${my_getattr(\"uuid\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "proceed": "",
+    "tester": "",
+    "testtime": "2020-07-27 17:44:26",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0003_login",
+    "case_name": "错误密码登录",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "",
+    "data": {
+      "username": "13900010001",
+      "password": "df123456",
+      "uuid": "${my_getattr(\"uuid\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "proceed": "",
+    "tester": "",
+    "testtime": "2020-07-27 17:44:27",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0004_login",
+    "case_name": "空用户名登录",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "",
+    "data": {
+      "username": "",
+      "password": 123456,
+      "uuid": "${my_getattr(\"uuid\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "proceed": "",
+    "tester": "",
+    "testtime": "2020-07-27 17:44:27",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0005_login",
+    "case_name": "空密码登录",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "",
+    "data": {
+      "username": "13900010001",
+      "password": "",
+      "uuid": "${my_getattr(\"uuid\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "proceed": "",
+    "tester": "",
+    "testtime": "2020-07-27 17:44:27",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0006_login",
+    "case_name": "正常登录",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "",
+    "data": {
+      "username": "13290021660",
+      "password": "${my_md5(\"123456\")}",
+      "uuid": "${my_getattr(\"uuid\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "操作成功",
+    "result": "FAIL",
+    "proceed": "[${my_setattr(\"access-token\",response[\"data\"][\"access-token\"])},${my_setattr(\"userId\",response[\"data\"][\"userId\"])}]",
+    "tester": "",
+    "testtime": "2020-07-27 17:44:27",
+    "sheet_name": "login"
+  }
+]
+[2020-07-29 10:10:14] INFO [test_api_demo.py, 27] 
+[2020-07-29 10:10:14] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:10:14] INFO [test_api_demo.py, 81] 执行proceed：['my_setattr("uuid": response["uuid"])']
+[2020-07-29 10:10:14] ERROR [test_api_demo.py, 90] invalid syntax (<string>, line 1)
+[2020-07-29 10:10:14] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-29 10:10:14] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\base_case_data\api_case.xlsx 的 login 表
+[2020-07-29 10:10:14] INFO [do_excel.py, 132] 修改api_case.xlsx成功：(2,11)=FAIL
+[2020-07-29 10:10:14] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\base_case_data\api_case.xlsx 的 login 表
+[2020-07-29 10:10:14] INFO [do_excel.py, 132] 修改api_case.xlsx成功：(2,14)=2020-07-29 10:10:14
+[2020-07-29 10:10:14] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:10:14] INFO [test_api_demo.py, 154] 
+[2020-07-29 10:10:14] INFO [test_api_demo.py, 27] 
+[2020-07-29 10:10:14] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:10:14] ERROR [test_api_demo.py, 90] type object '__AddValue' has no attribute 'uuid'
+[2020-07-29 10:10:14] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-29 10:10:14] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:10:14] INFO [do_excel.py, 132] 修改login.xlsx成功：(2,7)=FAIL
+[2020-07-29 10:10:14] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:10:14] INFO [do_excel.py, 132] 修改login.xlsx成功：(2,9)=2020-07-29 10:10:14
+[2020-07-29 10:10:14] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:10:14] INFO [test_api_demo.py, 154] 
+[2020-07-29 10:10:14] INFO [test_api_demo.py, 27] 
+[2020-07-29 10:10:14] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:10:14] ERROR [test_api_demo.py, 90] type object '__AddValue' has no attribute 'uuid'
+[2020-07-29 10:10:14] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-29 10:10:14] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:10:15] INFO [do_excel.py, 132] 修改login.xlsx成功：(3,7)=FAIL
+[2020-07-29 10:10:15] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:10:15] INFO [do_excel.py, 132] 修改login.xlsx成功：(3,9)=2020-07-29 10:10:15
+[2020-07-29 10:10:15] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:10:15] INFO [test_api_demo.py, 154] 
+[2020-07-29 10:10:15] INFO [test_api_demo.py, 27] 
+[2020-07-29 10:10:15] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:10:15] ERROR [test_api_demo.py, 90] type object '__AddValue' has no attribute 'uuid'
+[2020-07-29 10:10:15] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-29 10:10:15] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:10:15] INFO [do_excel.py, 132] 修改login.xlsx成功：(4,7)=FAIL
+[2020-07-29 10:10:15] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:10:15] INFO [do_excel.py, 132] 修改login.xlsx成功：(4,9)=2020-07-29 10:10:15
+[2020-07-29 10:10:15] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:10:15] INFO [test_api_demo.py, 154] 
+[2020-07-29 10:10:15] INFO [test_api_demo.py, 27] 
+[2020-07-29 10:10:15] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:10:15] ERROR [test_api_demo.py, 90] type object '__AddValue' has no attribute 'uuid'
+[2020-07-29 10:10:15] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-29 10:10:15] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:10:15] INFO [do_excel.py, 132] 修改login.xlsx成功：(5,7)=FAIL
+[2020-07-29 10:10:15] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:10:15] INFO [do_excel.py, 132] 修改login.xlsx成功：(5,9)=2020-07-29 10:10:15
+[2020-07-29 10:10:15] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:10:15] INFO [test_api_demo.py, 154] 
+[2020-07-29 10:10:15] INFO [test_api_demo.py, 27] 
+[2020-07-29 10:10:15] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:10:15] ERROR [test_api_demo.py, 90] type object '__AddValue' has no attribute 'uuid'
+[2020-07-29 10:10:15] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-29 10:10:15] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:10:15] INFO [do_excel.py, 132] 修改login.xlsx成功：(6,7)=FAIL
+[2020-07-29 10:10:15] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:10:15] INFO [do_excel.py, 132] 修改login.xlsx成功：(6,9)=2020-07-29 10:10:15
+[2020-07-29 10:10:15] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:10:15] INFO [test_api_demo.py, 154] 
+[2020-07-29 10:11:48] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\base_case_data\api_case.xlsx 的 login 表
+[2020-07-29 10:11:48] INFO [do_excel.py, 37] 读取 login 表 - 全部行的 - 用例数据
+[2020-07-29 10:11:48] INFO [do_excel.py, 94] 读取Excel - 反值：[
+  {
+    "csv_loop": "",
+    "case_id": "get_uuid",
+    "case_name": "获取UUID",
+    "url": "http://47.105.207.22/prod-api/captchaImage",
+    "method": "get",
+    "header": "",
+    "data": "",
+    "files": "",
+    "sql": "",
+    "msg": "成功",
+    "result": "FAIL",
+    "proceed": "[${my_setattr(\"uuid\": response[\"uuid\"])}]",
+    "tester": "",
+    "testtime": "2020-07-29 10:10:14"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "login",
+    "case_name": "get_csv(\"case_name\")",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "",
+    "data": "{\"username\":get_csv(\"username\"),\"password\": get_csv(\"password\"),\"uuid\":get_csv(\"uuid\")}",
+    "files": "",
+    "sql": "",
+    "msg": "${get_csv(\"msg\")}",
+    "result": "",
+    "proceed": "",
+    "tester": "",
+    "testtime": ""
+  }
+]
+[2020-07-29 10:11:48] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:11:48] INFO [do_excel.py, 37] 读取 login 表 - 全部行的 - 用例数据
+[2020-07-29 10:11:48] INFO [do_excel.py, 94] 读取Excel - 反值：[
+  {
+    "case_name": "错误用户名登录",
+    "username": "1390001000111",
+    "password": 123456,
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-29 10:10:14"
+  },
+  {
+    "case_name": "错误密码登录",
+    "username": "13900010001",
+    "password": "df123456",
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-29 10:10:15"
+  },
+  {
+    "case_name": "空用户名登录",
+    "username": "",
+    "password": 123456,
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-29 10:10:15"
+  },
+  {
+    "case_name": "空密码登录",
+    "username": "13900010001",
+    "password": "",
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-29 10:10:15"
+  },
+  {
+    "case_name": "正常登录",
+    "username": "13290021660",
+    "password": "${my_md5(\"123456\")}",
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "[${my_setattr(\"access-token\",response[\"data\"][\"access-token\"])},${my_setattr(\"userId\",response[\"data\"][\"userId\"])}]",
+    "msg": "操作成功",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-29 10:10:15"
+  }
+]
+[2020-07-29 10:12:24] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\base_case_data\api_case.xlsx 的 login 表
+[2020-07-29 10:12:24] INFO [do_excel.py, 37] 读取 login 表 - 全部行的 - 用例数据
+[2020-07-29 10:12:24] INFO [do_excel.py, 94] 读取Excel - 反值：[
+  {
+    "csv_loop": "",
+    "case_id": "get_uuid",
+    "case_name": "获取UUID",
+    "url": "http://47.105.207.22/prod-api/captchaImage",
+    "method": "get",
+    "header": "",
+    "data": "",
+    "files": "",
+    "sql": "",
+    "msg": "成功",
+    "result": "FAIL",
+    "proceed": "[${my_setattr(\"uuid\": response[\"uuid\"])}]",
+    "tester": "",
+    "testtime": "2020-07-29 10:10:14"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "login",
+    "case_name": "get_csv(\"case_name\")",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "",
+    "data": "{\"username\":get_csv(\"username\"),\"password\": get_csv(\"password\"),\"uuid\":get_csv(\"uuid\")}",
+    "files": "",
+    "sql": "",
+    "msg": "get_csv(\"msg\")",
+    "result": "",
+    "proceed": "",
+    "tester": "",
+    "testtime": ""
+  }
+]
+[2020-07-29 10:12:24] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:12:24] INFO [do_excel.py, 37] 读取 login 表 - 全部行的 - 用例数据
+[2020-07-29 10:12:24] INFO [do_excel.py, 94] 读取Excel - 反值：[
+  {
+    "case_name": "错误用户名登录",
+    "username": "1390001000111",
+    "password": 123456,
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-29 10:10:14"
+  },
+  {
+    "case_name": "错误密码登录",
+    "username": "13900010001",
+    "password": "df123456",
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-29 10:10:15"
+  },
+  {
+    "case_name": "空用户名登录",
+    "username": "",
+    "password": 123456,
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-29 10:10:15"
+  },
+  {
+    "case_name": "空密码登录",
+    "username": "13900010001",
+    "password": "",
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-29 10:10:15"
+  },
+  {
+    "case_name": "正常登录",
+    "username": "13290021660",
+    "password": "${my_md5(\"123456\")}",
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "[${my_setattr(\"access-token\",response[\"data\"][\"access-token\"])},${my_setattr(\"userId\",response[\"data\"][\"userId\"])}]",
+    "msg": "操作成功",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-29 10:10:15"
+  }
+]
+[2020-07-29 10:12:24] INFO [get_case_data.py, 73] 获取到的用例数据：[
+  {
+    "csv_loop": "",
+    "case_id": "0001_get_uuid",
+    "case_name": "获取UUID",
+    "url": "http://47.105.207.22/prod-api/captchaImage",
+    "method": "get",
+    "header": "",
+    "data": "",
+    "files": "",
+    "sql": "",
+    "msg": "成功",
+    "result": "FAIL",
+    "proceed": "[${my_setattr(\"uuid\": response[\"uuid\"])}]",
+    "tester": "",
+    "testtime": "2020-07-29 10:10:14",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0002_login",
+    "case_name": "错误用户名登录",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "",
+    "data": {
+      "username": "1390001000111",
+      "password": 123456,
+      "uuid": "${my_getattr(\"uuid\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "proceed": "",
+    "tester": "",
+    "testtime": "2020-07-29 10:10:14",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0003_login",
+    "case_name": "错误密码登录",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "",
+    "data": {
+      "username": "13900010001",
+      "password": "df123456",
+      "uuid": "${my_getattr(\"uuid\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "proceed": "",
+    "tester": "",
+    "testtime": "2020-07-29 10:10:15",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0004_login",
+    "case_name": "空用户名登录",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "",
+    "data": {
+      "username": "",
+      "password": 123456,
+      "uuid": "${my_getattr(\"uuid\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "proceed": "",
+    "tester": "",
+    "testtime": "2020-07-29 10:10:15",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0005_login",
+    "case_name": "空密码登录",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "",
+    "data": {
+      "username": "13900010001",
+      "password": "",
+      "uuid": "${my_getattr(\"uuid\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "proceed": "",
+    "tester": "",
+    "testtime": "2020-07-29 10:10:15",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0006_login",
+    "case_name": "正常登录",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "",
+    "data": {
+      "username": "13290021660",
+      "password": "${my_md5(\"123456\")}",
+      "uuid": "${my_getattr(\"uuid\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "操作成功",
+    "result": "FAIL",
+    "proceed": "[${my_setattr(\"access-token\",response[\"data\"][\"access-token\"])},${my_setattr(\"userId\",response[\"data\"][\"userId\"])}]",
+    "tester": "",
+    "testtime": "2020-07-29 10:10:15",
+    "sheet_name": "login"
+  }
+]
+[2020-07-29 10:12:24] INFO [test_api_demo.py, 27] 
+[2020-07-29 10:12:24] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:12:24] INFO [test_api_demo.py, 81] 执行proceed：['my_setattr("uuid": response["uuid"])']
+[2020-07-29 10:12:24] ERROR [test_api_demo.py, 90] invalid syntax (<string>, line 1)
+[2020-07-29 10:12:24] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-29 10:12:24] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\base_case_data\api_case.xlsx 的 login 表
+[2020-07-29 10:12:24] INFO [do_excel.py, 132] 修改api_case.xlsx成功：(2,11)=FAIL
+[2020-07-29 10:12:24] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\base_case_data\api_case.xlsx 的 login 表
+[2020-07-29 10:12:24] INFO [do_excel.py, 132] 修改api_case.xlsx成功：(2,14)=2020-07-29 10:12:24
+[2020-07-29 10:12:24] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:12:24] INFO [test_api_demo.py, 154] 
+[2020-07-29 10:12:24] INFO [test_api_demo.py, 27] 
+[2020-07-29 10:12:24] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:12:24] ERROR [test_api_demo.py, 90] type object '__AddValue' has no attribute 'uuid'
+[2020-07-29 10:12:24] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-29 10:12:24] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:12:25] INFO [do_excel.py, 132] 修改login.xlsx成功：(2,7)=FAIL
+[2020-07-29 10:12:25] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:12:25] INFO [do_excel.py, 132] 修改login.xlsx成功：(2,9)=2020-07-29 10:12:25
+[2020-07-29 10:12:25] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:12:25] INFO [test_api_demo.py, 154] 
+[2020-07-29 10:12:25] INFO [test_api_demo.py, 27] 
+[2020-07-29 10:12:25] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:12:25] ERROR [test_api_demo.py, 90] type object '__AddValue' has no attribute 'uuid'
+[2020-07-29 10:12:25] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-29 10:12:25] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:12:25] INFO [do_excel.py, 132] 修改login.xlsx成功：(3,7)=FAIL
+[2020-07-29 10:12:25] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:12:25] INFO [do_excel.py, 132] 修改login.xlsx成功：(3,9)=2020-07-29 10:12:25
+[2020-07-29 10:12:25] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:12:25] INFO [test_api_demo.py, 154] 
+[2020-07-29 10:12:25] INFO [test_api_demo.py, 27] 
+[2020-07-29 10:12:25] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:12:25] ERROR [test_api_demo.py, 90] type object '__AddValue' has no attribute 'uuid'
+[2020-07-29 10:12:25] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-29 10:12:25] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:12:25] INFO [do_excel.py, 132] 修改login.xlsx成功：(4,7)=FAIL
+[2020-07-29 10:12:25] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:12:25] INFO [do_excel.py, 132] 修改login.xlsx成功：(4,9)=2020-07-29 10:12:25
+[2020-07-29 10:12:25] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:12:25] INFO [test_api_demo.py, 154] 
+[2020-07-29 10:12:25] INFO [test_api_demo.py, 27] 
+[2020-07-29 10:12:25] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:12:25] ERROR [test_api_demo.py, 90] type object '__AddValue' has no attribute 'uuid'
+[2020-07-29 10:12:25] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-29 10:12:25] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:12:25] INFO [do_excel.py, 132] 修改login.xlsx成功：(5,7)=FAIL
+[2020-07-29 10:12:25] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:12:25] INFO [do_excel.py, 132] 修改login.xlsx成功：(5,9)=2020-07-29 10:12:25
+[2020-07-29 10:12:25] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:12:25] INFO [test_api_demo.py, 154] 
+[2020-07-29 10:12:25] INFO [test_api_demo.py, 27] 
+[2020-07-29 10:12:25] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:12:25] ERROR [test_api_demo.py, 90] type object '__AddValue' has no attribute 'uuid'
+[2020-07-29 10:12:25] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-29 10:12:25] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:12:25] INFO [do_excel.py, 132] 修改login.xlsx成功：(6,7)=FAIL
+[2020-07-29 10:12:25] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:12:25] INFO [do_excel.py, 132] 修改login.xlsx成功：(6,9)=2020-07-29 10:12:25
+[2020-07-29 10:12:25] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:12:25] INFO [test_api_demo.py, 154] 
+[2020-07-29 10:17:20] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\base_case_data\api_case.xlsx 的 login 表
+[2020-07-29 10:17:20] INFO [do_excel.py, 37] 读取 login 表 - 全部行的 - 用例数据
+[2020-07-29 10:17:20] INFO [do_excel.py, 94] 读取Excel - 反值：[
+  {
+    "csv_loop": "",
+    "case_id": "get_uuid",
+    "case_name": "获取UUID",
+    "url": "http://47.105.207.22/prod-api/captchaImage",
+    "method": "get",
+    "header": "",
+    "data": "",
+    "files": "",
+    "sql": "",
+    "msg": "操作成功",
+    "result": "FAIL",
+    "proceed": "[${my_setattr(\"uuid\",response[\"uuid\"])}]",
+    "tester": "",
+    "testtime": "2020-07-29 10:12:24"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "login",
+    "case_name": "get_csv(\"case_name\")",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "",
+    "data": "{\"username\":get_csv(\"username\"),\"password\": get_csv(\"password\"),\"uuid\":get_csv(\"uuid\")}",
+    "files": "",
+    "sql": "",
+    "msg": "get_csv(\"msg\")",
+    "result": "",
+    "proceed": "",
+    "tester": "",
+    "testtime": ""
+  }
+]
+[2020-07-29 10:17:20] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:17:20] INFO [do_excel.py, 37] 读取 login 表 - 全部行的 - 用例数据
+[2020-07-29 10:17:20] INFO [do_excel.py, 94] 读取Excel - 反值：[
+  {
+    "case_name": "错误用户名登录",
+    "username": "1390001000111",
+    "password": 123456,
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-29 10:12:25"
+  },
+  {
+    "case_name": "错误密码登录",
+    "username": "13900010001",
+    "password": "df123456",
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-29 10:12:25"
+  },
+  {
+    "case_name": "空用户名登录",
+    "username": "",
+    "password": 123456,
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-29 10:12:25"
+  },
+  {
+    "case_name": "空密码登录",
+    "username": "13900010001",
+    "password": "",
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-29 10:12:25"
+  },
+  {
+    "case_name": "正常登录",
+    "username": "13290021660",
+    "password": 123456,
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "[${my_setattr(\"cookie\",response[\"token\"])}]",
+    "msg": "操作成功",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-29 10:12:25"
+  }
+]
+[2020-07-29 10:17:20] INFO [get_case_data.py, 73] 获取到的用例数据：[
+  {
+    "csv_loop": "",
+    "case_id": "0001_get_uuid",
+    "case_name": "获取UUID",
+    "url": "http://47.105.207.22/prod-api/captchaImage",
+    "method": "get",
+    "header": "",
+    "data": "",
+    "files": "",
+    "sql": "",
+    "msg": "操作成功",
+    "result": "FAIL",
+    "proceed": "[${my_setattr(\"uuid\",response[\"uuid\"])}]",
+    "tester": "",
+    "testtime": "2020-07-29 10:12:24",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0002_login",
+    "case_name": "错误用户名登录",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "",
+    "data": {
+      "username": "1390001000111",
+      "password": 123456,
+      "uuid": "${my_getattr(\"uuid\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "proceed": "",
+    "tester": "",
+    "testtime": "2020-07-29 10:12:25",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0003_login",
+    "case_name": "错误密码登录",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "",
+    "data": {
+      "username": "13900010001",
+      "password": "df123456",
+      "uuid": "${my_getattr(\"uuid\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "proceed": "",
+    "tester": "",
+    "testtime": "2020-07-29 10:12:25",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0004_login",
+    "case_name": "空用户名登录",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "",
+    "data": {
+      "username": "",
+      "password": 123456,
+      "uuid": "${my_getattr(\"uuid\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "proceed": "",
+    "tester": "",
+    "testtime": "2020-07-29 10:12:25",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0005_login",
+    "case_name": "空密码登录",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "",
+    "data": {
+      "username": "13900010001",
+      "password": "",
+      "uuid": "${my_getattr(\"uuid\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "proceed": "",
+    "tester": "",
+    "testtime": "2020-07-29 10:12:25",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0006_login",
+    "case_name": "正常登录",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "",
+    "data": {
+      "username": "13290021660",
+      "password": 123456,
+      "uuid": "${my_getattr(\"uuid\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "操作成功",
+    "result": "FAIL",
+    "proceed": "[${my_setattr(\"cookie\",response[\"token\"])}]",
+    "tester": "",
+    "testtime": "2020-07-29 10:12:25",
+    "sheet_name": "login"
+  }
+]
+[2020-07-29 10:17:20] INFO [test_api_demo.py, 27] 
+[2020-07-29 10:17:20] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:17:20] INFO [test_api_demo.py, 81] 执行proceed：['my_setattr("uuid",response["uuid"])']
+[2020-07-29 10:17:20] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-29 10:17:20] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\base_case_data\api_case.xlsx 的 login 表
+[2020-07-29 10:17:20] INFO [do_excel.py, 132] 修改api_case.xlsx成功：(2,11)=PASS
+[2020-07-29 10:17:20] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\base_case_data\api_case.xlsx 的 login 表
+[2020-07-29 10:17:20] INFO [do_excel.py, 132] 修改api_case.xlsx成功：(2,14)=2020-07-29 10:17:20
+[2020-07-29 10:17:20] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:17:20] INFO [test_api_demo.py, 154] 
+[2020-07-29 10:17:20] INFO [test_api_demo.py, 27] 
+[2020-07-29 10:17:20] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:17:20] ERROR [test_api_demo.py, 90] '用户不存在/密码错误' not found in '{"code": 500, "msg": "Content type \'application/octet-stream\' not supported"}'
+[2020-07-29 10:17:20] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-29 10:17:20] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:17:20] INFO [do_excel.py, 132] 修改login.xlsx成功：(2,7)=FAIL
+[2020-07-29 10:17:20] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:17:21] INFO [do_excel.py, 132] 修改login.xlsx成功：(2,9)=2020-07-29 10:17:20
+[2020-07-29 10:17:21] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:17:21] INFO [test_api_demo.py, 154] 
+[2020-07-29 10:17:21] INFO [test_api_demo.py, 27] 
+[2020-07-29 10:17:21] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:17:21] ERROR [test_api_demo.py, 90] '用户不存在/密码错误' not found in '{"code": 500, "msg": "Content type \'application/octet-stream\' not supported"}'
+[2020-07-29 10:17:21] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-29 10:17:21] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:17:21] INFO [do_excel.py, 132] 修改login.xlsx成功：(3,7)=FAIL
+[2020-07-29 10:17:21] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:17:21] INFO [do_excel.py, 132] 修改login.xlsx成功：(3,9)=2020-07-29 10:17:21
+[2020-07-29 10:17:21] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:17:21] INFO [test_api_demo.py, 154] 
+[2020-07-29 10:17:21] INFO [test_api_demo.py, 27] 
+[2020-07-29 10:17:21] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:17:21] ERROR [test_api_demo.py, 90] '用户不存在/密码错误' not found in '{"code": 500, "msg": "Content type \'application/octet-stream\' not supported"}'
+[2020-07-29 10:17:21] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-29 10:17:21] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:17:21] INFO [do_excel.py, 132] 修改login.xlsx成功：(4,7)=FAIL
+[2020-07-29 10:17:21] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:17:21] INFO [do_excel.py, 132] 修改login.xlsx成功：(4,9)=2020-07-29 10:17:21
+[2020-07-29 10:17:21] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:17:21] INFO [test_api_demo.py, 154] 
+[2020-07-29 10:17:21] INFO [test_api_demo.py, 27] 
+[2020-07-29 10:17:21] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:17:21] ERROR [test_api_demo.py, 90] '用户不存在/密码错误' not found in '{"code": 500, "msg": "Content type \'application/octet-stream\' not supported"}'
+[2020-07-29 10:17:21] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-29 10:17:21] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:17:21] INFO [do_excel.py, 132] 修改login.xlsx成功：(5,7)=FAIL
+[2020-07-29 10:17:21] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:17:21] INFO [do_excel.py, 132] 修改login.xlsx成功：(5,9)=2020-07-29 10:17:21
+[2020-07-29 10:17:21] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:17:21] INFO [test_api_demo.py, 154] 
+[2020-07-29 10:17:21] INFO [test_api_demo.py, 27] 
+[2020-07-29 10:17:21] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:17:21] INFO [test_api_demo.py, 81] 执行proceed：['my_setattr("cookie",response["token"])']
+[2020-07-29 10:17:21] ERROR [test_api_demo.py, 90] 'token'
+[2020-07-29 10:17:21] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-29 10:17:21] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:17:21] INFO [do_excel.py, 132] 修改login.xlsx成功：(6,7)=FAIL
+[2020-07-29 10:17:21] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:17:21] INFO [do_excel.py, 132] 修改login.xlsx成功：(6,9)=2020-07-29 10:17:21
+[2020-07-29 10:17:21] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:17:21] INFO [test_api_demo.py, 154] 
+[2020-07-29 10:18:52] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\base_case_data\api_case.xlsx 的 login 表
+[2020-07-29 10:18:52] INFO [do_excel.py, 37] 读取 login 表 - 全部行的 - 用例数据
+[2020-07-29 10:18:52] INFO [do_excel.py, 94] 读取Excel - 反值：[
+  {
+    "csv_loop": "",
+    "case_id": "get_uuid",
+    "case_name": "获取UUID",
+    "url": "http://47.105.207.22/prod-api/captchaImage",
+    "method": "get",
+    "header": "",
+    "data": "",
+    "files": "",
+    "sql": "",
+    "msg": "操作成功",
+    "result": "PASS",
+    "proceed": "[${my_setattr(\"uuid\",response[\"uuid\"])}]",
+    "tester": "",
+    "testtime": "2020-07-29 10:17:20"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "login",
+    "case_name": "get_csv(\"case_name\")",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "{\"content-type\":\"application/json\"}",
+    "data": "{\"username\":get_csv(\"username\"),\"password\": get_csv(\"password\"),\"uuid\":get_csv(\"uuid\")}",
+    "files": "",
+    "sql": "",
+    "msg": "get_csv(\"msg\")",
+    "result": "",
+    "proceed": "",
+    "tester": "",
+    "testtime": ""
+  }
+]
+[2020-07-29 10:18:52] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:18:52] INFO [do_excel.py, 37] 读取 login 表 - 全部行的 - 用例数据
+[2020-07-29 10:18:52] INFO [do_excel.py, 94] 读取Excel - 反值：[
+  {
+    "case_name": "错误用户名登录",
+    "username": "1390001000111",
+    "password": 123456,
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-29 10:17:20"
+  },
+  {
+    "case_name": "错误密码登录",
+    "username": "13900010001",
+    "password": "df123456",
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-29 10:17:21"
+  },
+  {
+    "case_name": "空用户名登录",
+    "username": "",
+    "password": 123456,
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-29 10:17:21"
+  },
+  {
+    "case_name": "空密码登录",
+    "username": "13900010001",
+    "password": "",
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-29 10:17:21"
+  },
+  {
+    "case_name": "正常登录",
+    "username": "13290021660",
+    "password": 123456,
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "[${my_setattr(\"cookie\",response[\"token\"])}]",
+    "msg": "操作成功",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-29 10:17:21"
+  }
+]
+[2020-07-29 10:18:52] INFO [get_case_data.py, 73] 获取到的用例数据：[
+  {
+    "csv_loop": "",
+    "case_id": "0001_get_uuid",
+    "case_name": "获取UUID",
+    "url": "http://47.105.207.22/prod-api/captchaImage",
+    "method": "get",
+    "header": "",
+    "data": "",
+    "files": "",
+    "sql": "",
+    "msg": "操作成功",
+    "result": "PASS",
+    "proceed": "[${my_setattr(\"uuid\",response[\"uuid\"])}]",
+    "tester": "",
+    "testtime": "2020-07-29 10:17:20",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0002_login",
+    "case_name": "错误用户名登录",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "{\"content-type\":\"application/json\"}",
+    "data": {
+      "username": "1390001000111",
+      "password": 123456,
+      "uuid": "${my_getattr(\"uuid\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "proceed": "",
+    "tester": "",
+    "testtime": "2020-07-29 10:17:20",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0003_login",
+    "case_name": "错误密码登录",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "{\"content-type\":\"application/json\"}",
+    "data": {
+      "username": "13900010001",
+      "password": "df123456",
+      "uuid": "${my_getattr(\"uuid\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "proceed": "",
+    "tester": "",
+    "testtime": "2020-07-29 10:17:21",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0004_login",
+    "case_name": "空用户名登录",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "{\"content-type\":\"application/json\"}",
+    "data": {
+      "username": "",
+      "password": 123456,
+      "uuid": "${my_getattr(\"uuid\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "proceed": "",
+    "tester": "",
+    "testtime": "2020-07-29 10:17:21",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0005_login",
+    "case_name": "空密码登录",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "{\"content-type\":\"application/json\"}",
+    "data": {
+      "username": "13900010001",
+      "password": "",
+      "uuid": "${my_getattr(\"uuid\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "用户不存在/密码错误",
+    "result": "FAIL",
+    "proceed": "",
+    "tester": "",
+    "testtime": "2020-07-29 10:17:21",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0006_login",
+    "case_name": "正常登录",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "{\"content-type\":\"application/json\"}",
+    "data": {
+      "username": "13290021660",
+      "password": 123456,
+      "uuid": "${my_getattr(\"uuid\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "操作成功",
+    "result": "FAIL",
+    "proceed": "[${my_setattr(\"cookie\",response[\"token\"])}]",
+    "tester": "",
+    "testtime": "2020-07-29 10:17:21",
+    "sheet_name": "login"
+  }
+]
+[2020-07-29 10:18:52] INFO [test_api_demo.py, 27] 
+[2020-07-29 10:18:52] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:18:52] INFO [test_api_demo.py, 81] 执行proceed：['my_setattr("uuid",response["uuid"])']
+[2020-07-29 10:18:52] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-29 10:18:52] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\base_case_data\api_case.xlsx 的 login 表
+[2020-07-29 10:18:52] INFO [do_excel.py, 132] 修改api_case.xlsx成功：(2,11)=PASS
+[2020-07-29 10:18:52] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\base_case_data\api_case.xlsx 的 login 表
+[2020-07-29 10:18:52] INFO [do_excel.py, 132] 修改api_case.xlsx成功：(2,14)=2020-07-29 10:18:52
+[2020-07-29 10:18:52] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:18:52] INFO [test_api_demo.py, 154] 
+[2020-07-29 10:18:52] INFO [test_api_demo.py, 27] 
+[2020-07-29 10:18:52] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:18:52] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-29 10:18:52] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:18:52] INFO [do_excel.py, 132] 修改login.xlsx成功：(2,7)=PASS
+[2020-07-29 10:18:52] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:18:52] INFO [do_excel.py, 132] 修改login.xlsx成功：(2,9)=2020-07-29 10:18:52
+[2020-07-29 10:18:52] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:18:52] INFO [test_api_demo.py, 154] 
+[2020-07-29 10:18:52] INFO [test_api_demo.py, 27] 
+[2020-07-29 10:18:52] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:18:52] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-29 10:18:52] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:18:52] INFO [do_excel.py, 132] 修改login.xlsx成功：(3,7)=PASS
+[2020-07-29 10:18:52] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:18:52] INFO [do_excel.py, 132] 修改login.xlsx成功：(3,9)=2020-07-29 10:18:52
+[2020-07-29 10:18:52] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:18:52] INFO [test_api_demo.py, 154] 
+[2020-07-29 10:18:52] INFO [test_api_demo.py, 27] 
+[2020-07-29 10:18:52] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:18:53] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-29 10:18:53] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:18:53] INFO [do_excel.py, 132] 修改login.xlsx成功：(4,7)=PASS
+[2020-07-29 10:18:53] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:18:53] INFO [do_excel.py, 132] 修改login.xlsx成功：(4,9)=2020-07-29 10:18:53
+[2020-07-29 10:18:53] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:18:53] INFO [test_api_demo.py, 154] 
+[2020-07-29 10:18:53] INFO [test_api_demo.py, 27] 
+[2020-07-29 10:18:53] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:18:53] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-29 10:18:53] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:18:53] INFO [do_excel.py, 132] 修改login.xlsx成功：(5,7)=PASS
+[2020-07-29 10:18:53] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:18:53] INFO [do_excel.py, 132] 修改login.xlsx成功：(5,9)=2020-07-29 10:18:53
+[2020-07-29 10:18:53] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:18:53] INFO [test_api_demo.py, 154] 
+[2020-07-29 10:18:53] INFO [test_api_demo.py, 27] 
+[2020-07-29 10:18:53] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:18:53] INFO [test_api_demo.py, 81] 执行proceed：['my_setattr("cookie",response["token"])']
+[2020-07-29 10:18:53] ERROR [test_api_demo.py, 90] 'token'
+[2020-07-29 10:18:53] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-29 10:18:53] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:18:53] INFO [do_excel.py, 132] 修改login.xlsx成功：(6,7)=FAIL
+[2020-07-29 10:18:53] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:18:53] INFO [do_excel.py, 132] 修改login.xlsx成功：(6,9)=2020-07-29 10:18:53
+[2020-07-29 10:18:53] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:18:53] INFO [test_api_demo.py, 154] 
+[2020-07-29 10:19:57] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\base_case_data\api_case.xlsx 的 login 表
+[2020-07-29 10:19:57] INFO [do_excel.py, 37] 读取 login 表 - 全部行的 - 用例数据
+[2020-07-29 10:19:57] INFO [do_excel.py, 94] 读取Excel - 反值：[
+  {
+    "csv_loop": "",
+    "case_id": "get_uuid",
+    "case_name": "获取UUID",
+    "url": "http://47.105.207.22/prod-api/captchaImage",
+    "method": "get",
+    "header": "",
+    "data": "",
+    "files": "",
+    "sql": "",
+    "msg": "操作成功",
+    "result": "PASS",
+    "proceed": "[${my_setattr(\"uuid\",response[\"uuid\"])}]",
+    "tester": "",
+    "testtime": "2020-07-29 10:18:52"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "login",
+    "case_name": "get_csv(\"case_name\")",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "{\"content-type\":\"application/json\"}",
+    "data": "{\"username\":get_csv(\"username\"),\"password\": get_csv(\"password\"),\"uuid\":get_csv(\"uuid\")}",
+    "files": "",
+    "sql": "",
+    "msg": "get_csv(\"msg\")",
+    "result": "",
+    "proceed": "",
+    "tester": "",
+    "testtime": ""
+  }
+]
+[2020-07-29 10:19:57] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:19:57] INFO [do_excel.py, 37] 读取 login 表 - 全部行的 - 用例数据
+[2020-07-29 10:19:57] INFO [do_excel.py, 94] 读取Excel - 反值：[
+  {
+    "case_name": "错误用户名登录",
+    "username": "1390001000111",
+    "password": 123456,
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "PASS",
+    "tester": "",
+    "testtime": "2020-07-29 10:18:52"
+  },
+  {
+    "case_name": "错误密码登录",
+    "username": "13900010001",
+    "password": "df123456",
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "PASS",
+    "tester": "",
+    "testtime": "2020-07-29 10:18:52"
+  },
+  {
+    "case_name": "空用户名登录",
+    "username": "",
+    "password": 123456,
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "PASS",
+    "tester": "",
+    "testtime": "2020-07-29 10:18:53"
+  },
+  {
+    "case_name": "空密码登录",
+    "username": "13900010001",
+    "password": "",
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "",
+    "msg": "用户不存在/密码错误",
+    "result": "PASS",
+    "tester": "",
+    "testtime": "2020-07-29 10:18:53"
+  },
+  {
+    "case_name": "正常登录",
+    "username": "13900010001",
+    "password": 123456,
+    "uuid": "${my_getattr(\"uuid\")}",
+    "proceed": "[${my_setattr(\"cookie\",response[\"token\"])}]",
+    "msg": "操作成功",
+    "result": "FAIL",
+    "tester": "",
+    "testtime": "2020-07-29 10:18:53"
+  }
+]
+[2020-07-29 10:19:57] INFO [get_case_data.py, 73] 获取到的用例数据：[
+  {
+    "csv_loop": "",
+    "case_id": "0001_get_uuid",
+    "case_name": "获取UUID",
+    "url": "http://47.105.207.22/prod-api/captchaImage",
+    "method": "get",
+    "header": "",
+    "data": "",
+    "files": "",
+    "sql": "",
+    "msg": "操作成功",
+    "result": "PASS",
+    "proceed": "[${my_setattr(\"uuid\",response[\"uuid\"])}]",
+    "tester": "",
+    "testtime": "2020-07-29 10:18:52",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0002_login",
+    "case_name": "错误用户名登录",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "{\"content-type\":\"application/json\"}",
+    "data": {
+      "username": "1390001000111",
+      "password": 123456,
+      "uuid": "${my_getattr(\"uuid\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "用户不存在/密码错误",
+    "result": "PASS",
+    "proceed": "",
+    "tester": "",
+    "testtime": "2020-07-29 10:18:52",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0003_login",
+    "case_name": "错误密码登录",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "{\"content-type\":\"application/json\"}",
+    "data": {
+      "username": "13900010001",
+      "password": "df123456",
+      "uuid": "${my_getattr(\"uuid\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "用户不存在/密码错误",
+    "result": "PASS",
+    "proceed": "",
+    "tester": "",
+    "testtime": "2020-07-29 10:18:52",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0004_login",
+    "case_name": "空用户名登录",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "{\"content-type\":\"application/json\"}",
+    "data": {
+      "username": "",
+      "password": 123456,
+      "uuid": "${my_getattr(\"uuid\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "用户不存在/密码错误",
+    "result": "PASS",
+    "proceed": "",
+    "tester": "",
+    "testtime": "2020-07-29 10:18:53",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0005_login",
+    "case_name": "空密码登录",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "{\"content-type\":\"application/json\"}",
+    "data": {
+      "username": "13900010001",
+      "password": "",
+      "uuid": "${my_getattr(\"uuid\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "用户不存在/密码错误",
+    "result": "PASS",
+    "proceed": "",
+    "tester": "",
+    "testtime": "2020-07-29 10:18:53",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0006_login",
+    "case_name": "正常登录",
+    "url": "http://47.105.207.22/prod-api/login",
+    "method": "post",
+    "header": "{\"content-type\":\"application/json\"}",
+    "data": {
+      "username": "13900010001",
+      "password": 123456,
+      "uuid": "${my_getattr(\"uuid\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "操作成功",
+    "result": "FAIL",
+    "proceed": "[${my_setattr(\"cookie\",response[\"token\"])}]",
+    "tester": "",
+    "testtime": "2020-07-29 10:18:53",
+    "sheet_name": "login"
+  }
+]
+[2020-07-29 10:19:57] INFO [test_api_demo.py, 27] 
+[2020-07-29 10:19:57] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:19:57] INFO [test_api_demo.py, 81] 执行proceed：['my_setattr("uuid",response["uuid"])']
+[2020-07-29 10:19:57] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-29 10:19:57] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\base_case_data\api_case.xlsx 的 login 表
+[2020-07-29 10:19:57] INFO [do_excel.py, 132] 修改api_case.xlsx成功：(2,11)=PASS
+[2020-07-29 10:19:57] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\base_case_data\api_case.xlsx 的 login 表
+[2020-07-29 10:19:57] INFO [do_excel.py, 132] 修改api_case.xlsx成功：(2,14)=2020-07-29 10:19:57
+[2020-07-29 10:19:57] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:19:57] INFO [test_api_demo.py, 154] 
+[2020-07-29 10:19:57] INFO [test_api_demo.py, 27] 
+[2020-07-29 10:19:57] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:19:58] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-29 10:19:58] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:19:58] INFO [do_excel.py, 132] 修改login.xlsx成功：(2,7)=PASS
+[2020-07-29 10:19:58] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:19:58] INFO [do_excel.py, 132] 修改login.xlsx成功：(2,9)=2020-07-29 10:19:58
+[2020-07-29 10:19:58] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:19:58] INFO [test_api_demo.py, 154] 
+[2020-07-29 10:19:58] INFO [test_api_demo.py, 27] 
+[2020-07-29 10:19:58] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:19:58] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-29 10:19:58] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:19:58] INFO [do_excel.py, 132] 修改login.xlsx成功：(3,7)=PASS
+[2020-07-29 10:19:58] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:19:58] INFO [do_excel.py, 132] 修改login.xlsx成功：(3,9)=2020-07-29 10:19:58
+[2020-07-29 10:19:58] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:19:58] INFO [test_api_demo.py, 154] 
+[2020-07-29 10:19:58] INFO [test_api_demo.py, 27] 
+[2020-07-29 10:19:58] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:19:58] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-29 10:19:58] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:19:58] INFO [do_excel.py, 132] 修改login.xlsx成功：(4,7)=PASS
+[2020-07-29 10:19:58] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:19:58] INFO [do_excel.py, 132] 修改login.xlsx成功：(4,9)=2020-07-29 10:19:58
+[2020-07-29 10:19:58] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:19:58] INFO [test_api_demo.py, 154] 
+[2020-07-29 10:19:58] INFO [test_api_demo.py, 27] 
+[2020-07-29 10:19:58] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:19:58] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-29 10:19:59] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:19:59] INFO [do_excel.py, 132] 修改login.xlsx成功：(5,7)=PASS
+[2020-07-29 10:19:59] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:19:59] INFO [do_excel.py, 132] 修改login.xlsx成功：(5,9)=2020-07-29 10:19:59
+[2020-07-29 10:19:59] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:19:59] INFO [test_api_demo.py, 154] 
+[2020-07-29 10:19:59] INFO [test_api_demo.py, 27] 
+[2020-07-29 10:19:59] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:19:59] INFO [test_api_demo.py, 81] 执行proceed：['my_setattr("cookie",response["token"])']
+[2020-07-29 10:19:59] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-29 10:19:59] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:19:59] INFO [do_excel.py, 132] 修改login.xlsx成功：(6,7)=PASS
+[2020-07-29 10:19:59] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-29 10:19:59] INFO [do_excel.py, 132] 修改login.xlsx成功：(6,9)=2020-07-29 10:19:59
+[2020-07-29 10:19:59] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-29 10:19:59] INFO [test_api_demo.py, 154] 

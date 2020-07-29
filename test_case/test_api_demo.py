@@ -6,21 +6,17 @@ from config.PATH import *
 import ddt
 from core.do_excel import DoExcel
 from core.send_requests import BaseCse
-<<<<<<< HEAD:test_case/test_api_demo.py
-from core.my_logger import CaseLogModule
-from core.my_logger import MyLog
-=======
-from core.my_log import CaseLogModule
-from core.my_log import log
->>>>>>> origin/master:test_case/test_api.py
+# from core.my_logger import CaseLogModule
+from core.my_logger import log
 from utils.my_functions import *
 from utils.get_case_data import GetCaseData
 from utils.common import *
+from utils.my_split import deal_function_data, get_str
 
 
 # 获取原始用例数据 和 CSV的参数化用例数据，并且合并成最终的用例数据。
 new_case_data = GetCaseData().get_case_data()
-
+response = None
 test_result = None
 
 
@@ -29,159 +25,73 @@ class TestApiDemo(BaseCse):
     def setUp(self):
         urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
         log .info('')
-        log .info('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
+        log .info('<' * 30 + '  用例开始  ' + '>' * 30)
 
     @ddt.data(*new_case_data)
     def test_api_case(self, data1):
-<<<<<<< HEAD:test_case/test_api_demo.py
-=======
-        # 分割用例数据
-        # 用例结果
-        global test_result
-
-        # 用例请求头
-        if data1['header'] != "":
-            header = json.loads(json.dumps(eval(data1['header'])))
-        else:
-            header = None
-
-        # 用例名字
-        case_name = data1['case_name']
-
-        # 用例id
-        case_id = data1['case_id']
-
-        # 接口url
-        url = data1['url']
-
-        # 接口method
-        if isinstance(data1['method'], dict):
-            method = json.dumps(data1['method'])
-        else:
-            method = data1['method']
-
-        # 接口data - 没调用内置函数版本
-        if isinstance(data1['data'], dict) or isinstance(data1['data'], list) or isinstance(data1['data'], tuple):
-            data = json.dumps(data1['data'])
-        else:
-            data = data1['data']
-
-        # 接口data - 要调用内置函数版本
-        if 'my_' in str(data):
-            new_data = json.dumps(eval(data))
-        else:
-            new_data = data
-
-        # 接口data - 文件
-        if data1['files'] == "":
-            files = None
-        elif data1['files'] != "" and isinstance(data1['files'], str):
-            files = eval(data1['files'])
-        else:
-            files = data1['files']
-
-        # 期望结果
-        msg = data1['msg']
-
-        # 后续操作
-        if isinstance(data1['proceed'], dict) or isinstance(data1['proceed'], list) or isinstance(data1['proceed'], tuple):
-            proceed = json.dumps(eval(data1['proceed']))
-        else:
-            proceed = data1['proceed']
-
-        # 打印日志
-        CaseLogModule.case_log_module_request(case_id, case_name, url, method, header, new_data)
-        print('用例ID：{}'.format(case_id))
-        print('用例name：{}'.format(case_name))
-        print('请求url：{}'.format(url))
-        print('请求method：{}'.format(method))
-        print('请求header：{}'.format(header))
-        print('请求data：{}'.format(new_data))
-
-        # 发送请求
-        response = json.loads(self.send_requests(url, method, header, new_data, files))
-
-        # 打印日志
-        CaseLogModule.case_log_module_response(msg, response, proceed)
-        print('期望结果：{}'.format(msg))
-        print('实际结果：{}'.format(response))
-
-        # 执行后续操作
-        if proceed != "":
-            log .info('添加全局变量：{}'.format(proceed))
-            eval(proceed)
-
->>>>>>> origin/master:test_case/test_api.py
         try:
             # 分割用例数据
             global test_result
-            if data1['header'] != "":
-                header = json.loads(json.dumps(eval(data1['header'])))
-            else:
-                header = None
-            case_name = data1['case_name']
+            global response
             case_id = data1['case_id']
+            case_name = data1['case_name']
             url = data1['url']
-            if isinstance(data1['method'], dict):
-                method = json.dumps(data1['method'])
-            else:
-                method = data1['method']
+            method = deal_function_data(data1['method'])
 
-            if isinstance(data1['data'], dict) or isinstance(data1['data'], list) or isinstance(data1['data'], tuple):
-                data = json.dumps(data1['data'])
-            else:
-                data = data1['data']
+            # 请求header
+            header = deal_function_data(data1['header'])
+            # print(header)
+            # if header != "":
+            #     header = json.loads(json.dumps(eval(header)))
+            # else:
+            #     header = header
 
-            if 'my_' in str(data):
-                new_data = json.dumps(eval(data))
+            # 请求data
+            data = deal_function_data(data1['data'])
+            if data == "" or data == '' or data is None:
+                pass
             else:
-                new_data = data
+                data = eval(data)
 
-            if data1['files'] == "":
-                files = None
-            elif data1['files'] != "" and isinstance(data1['files'], str):
-                files = eval(data1['files'])
-            else:
-                files = data1['files']
-
-            msg = data1['msg']
-
-            if isinstance(data1['proceed'], dict) or isinstance(data1['proceed'], list) or isinstance(data1['proceed'], tuple):
-                proceed = json.dumps(eval(data1['proceed']))
-            else:
-                proceed = data1['proceed']
+            # 请求上传文件
+            files = deal_function_data(data1['files'])
+            msg = deal_function_data(data1['msg'])
+            proceed = get_str(data1['proceed'])
 
             # 打印日志
-            CaseLogModule.case_log_module_request(case_id, case_name, url, method, header, new_data)
+            # CaseLogModule.case_log_module_request(case_id, case_name, url, method, header, new_data)
             print('用例ID：{}'.format(case_id))
             print('用例name：{}'.format(case_name))
             print('请求url：{}'.format(url))
             print('请求method：{}'.format(method))
             print('请求header：{}'.format(header))
             print('请求data：{}'.format(data))
+            print('请求files：{}'.format(files))
 
             # 发送请求
-            response = json.loads(self.send_requests(url, method, header, new_data, files))
+            response = json.loads(self.send_requests(url, method, header, data, files))
 
             # 打印日志
-            CaseLogModule.case_log_module_response(msg, response, proceed)
+            # CaseLogModule.case_log_module_response(msg, response, proceed)
             print('期望结果：{}'.format(msg))
             print('实际结果：{}'.format(response))
 
             # 添加变量，为下一个接口做准备
-            if proceed != "":
-                log_me456 .info('添加全局变量：{}'.format(proceed))
-                eval(proceed)
+            if len(proceed) != 0:
+                log .info('执行proceed：{}'.format(proceed))
+                for i in proceed:
+                    eval(i)
 
             # 断言
             self.assertIn(msg, json.dumps(response, ensure_ascii=False))
             test_result = 'PASS'
-        except AssertionError as e:
+        except Exception as e:
             test_result = 'FAIL'
             log.error(e)
-            raise e
+            self.fail(e)
+            # raise Exception
         finally:
-            log.info('-----------------------------> 对Excel写入测试结果 <-----------------------------')
+            log.info("-" * 20 + "> 对Excel写入测试结果 <" + "-" * 20)
             base_case_filename = os.path.join(BASE_CASE_DATA, 'api_case.xlsx')
             identify = data1['sheet_name'] + data1['csv_loop']
 
@@ -240,7 +150,7 @@ class TestApiDemo(BaseCse):
             my_setattr('csv_name', data1['csv_loop'])
 
     def tearDown(self):
-        log .info('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
+        log .info('<' * 30 + '  用例结束  ' + '>' * 30)
         log .info('')
 
 

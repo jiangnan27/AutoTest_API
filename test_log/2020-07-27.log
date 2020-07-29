@@ -1,0 +1,449 @@
+[2020-07-27 17:42:51] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\base_case_data\api_case.xlsx 的 login 表
+[2020-07-27 17:42:51] INFO [do_excel.py, 37] 读取 login 表 - 全部行的 - 用例数据
+[2020-07-27 17:42:51] INFO [do_excel.py, 94] 读取Excel - 反值：[
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "login",
+    "case_name": "get_csv(\"userName\")",
+    "url": "https://mobile-test.qingzhuyun.com/api/mobile/login",
+    "method": "post",
+    "header": "{\"content-type\": \"application/json\"}",
+    "data": "{\"userName\":get_csv(\"userName\"),\"password\": get_csv(\"password\")}",
+    "files": "",
+    "sql": "",
+    "msg": "成功",
+    "result": "",
+    "proceed": "",
+    "tester": "mua~222",
+    "testtime": ""
+  }
+]
+[2020-07-27 17:42:51] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-27 17:42:52] INFO [do_excel.py, 37] 读取 login 表 - 全部行的 - 用例数据
+[2020-07-27 17:42:52] INFO [do_excel.py, 94] 读取Excel - 反值：[
+  {
+    "case_name": "错误用户名登录",
+    "userName": "12",
+    "password": "${my_md5(\"123456\")}",
+    "proceed": "",
+    "msg": "用户名或密码错误",
+    "result": "PASS",
+    "tester": "",
+    "testtime": "2020-07-26 18:28:12"
+  },
+  {
+    "case_name": "错误密码登录",
+    "userName": "1234",
+    "password": "${my_md5(\"1234\")}",
+    "proceed": "",
+    "msg": "用户名或密码错误",
+    "result": "PASS",
+    "tester": "",
+    "testtime": "2020-07-26 18:28:12"
+  },
+  {
+    "case_name": "空用户名登录",
+    "userName": "",
+    "password": "${my_md5(\"123456\")}",
+    "proceed": "",
+    "msg": "无效的参数",
+    "result": "PASS",
+    "tester": "",
+    "testtime": "2020-07-26 18:28:12"
+  },
+  {
+    "case_name": "空密码登录",
+    "userName": "1234",
+    "password": "",
+    "proceed": "",
+    "msg": "无效的参数",
+    "result": "PASS",
+    "tester": "",
+    "testtime": "2020-07-26 18:28:13"
+  },
+  {
+    "case_name": "正常登录",
+    "userName": "13290021660",
+    "password": "${my_md5(\"123456\")}",
+    "proceed": "[${my_setattr(\"access-token\",response[\"data\"][\"access-token\"])},${my_setattr(\"userId\",response[\"data\"][\"userId\"])}]",
+    "msg": "成功",
+    "result": "PASS",
+    "tester": "",
+    "testtime": "2020-07-26 18:28:13"
+  }
+]
+[2020-07-27 17:42:52] INFO [get_case_data.py, 73] 获取到的用例数据：[
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0001_login",
+    "case_name": "12",
+    "url": "https://mobile-test.qingzhuyun.com/api/mobile/login",
+    "method": "post",
+    "header": "{\"content-type\": \"application/json\"}",
+    "data": {
+      "userName": "12",
+      "password": "${my_md5(\"123456\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "用户名或密码错误",
+    "result": "PASS",
+    "proceed": "",
+    "tester": "",
+    "testtime": "2020-07-26 18:28:12",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0002_login",
+    "case_name": "1234",
+    "url": "https://mobile-test.qingzhuyun.com/api/mobile/login",
+    "method": "post",
+    "header": "{\"content-type\": \"application/json\"}",
+    "data": {
+      "userName": "1234",
+      "password": "${my_md5(\"1234\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "用户名或密码错误",
+    "result": "PASS",
+    "proceed": "",
+    "tester": "",
+    "testtime": "2020-07-26 18:28:12",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0003_login",
+    "case_name": "",
+    "url": "https://mobile-test.qingzhuyun.com/api/mobile/login",
+    "method": "post",
+    "header": "{\"content-type\": \"application/json\"}",
+    "data": {
+      "userName": "",
+      "password": "${my_md5(\"123456\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "无效的参数",
+    "result": "PASS",
+    "proceed": "",
+    "tester": "",
+    "testtime": "2020-07-26 18:28:12",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0004_login",
+    "case_name": "1234",
+    "url": "https://mobile-test.qingzhuyun.com/api/mobile/login",
+    "method": "post",
+    "header": "{\"content-type\": \"application/json\"}",
+    "data": {
+      "userName": "1234",
+      "password": ""
+    },
+    "files": "",
+    "sql": "",
+    "msg": "无效的参数",
+    "result": "PASS",
+    "proceed": "",
+    "tester": "",
+    "testtime": "2020-07-26 18:28:13",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0005_login",
+    "case_name": "13290021660",
+    "url": "https://mobile-test.qingzhuyun.com/api/mobile/login",
+    "method": "post",
+    "header": "{\"content-type\": \"application/json\"}",
+    "data": {
+      "userName": "13290021660",
+      "password": "${my_md5(\"123456\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "成功",
+    "result": "PASS",
+    "proceed": "[${my_setattr(\"access-token\",response[\"data\"][\"access-token\"])},${my_setattr(\"userId\",response[\"data\"][\"userId\"])}]",
+    "tester": "",
+    "testtime": "2020-07-26 18:28:13",
+    "sheet_name": "login"
+  }
+]
+[2020-07-27 17:42:52] INFO [test_api_demo.py, 27] 
+[2020-07-27 17:42:52] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-27 17:42:52] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-27 17:42:52] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-27 17:42:52] INFO [do_excel.py, 132] 修改login.xlsx成功：(2,6)=PASS
+[2020-07-27 17:42:52] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-27 17:42:52] INFO [do_excel.py, 132] 修改login.xlsx成功：(2,8)=2020-07-27 17:42:52
+[2020-07-27 17:42:52] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-27 17:42:52] INFO [test_api_demo.py, 154] 
+[2020-07-27 17:42:52] INFO [test_api_demo.py, 27] 
+[2020-07-27 17:42:52] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-27 17:42:52] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-27 17:42:52] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-27 17:42:52] INFO [do_excel.py, 132] 修改login.xlsx成功：(3,6)=PASS
+[2020-07-27 17:42:52] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-27 17:42:52] INFO [do_excel.py, 132] 修改login.xlsx成功：(3,8)=2020-07-27 17:42:52
+[2020-07-27 17:42:52] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-27 17:42:52] INFO [test_api_demo.py, 154] 
+[2020-07-27 17:42:52] INFO [test_api_demo.py, 27] 
+[2020-07-27 17:42:52] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-27 17:42:52] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-27 17:42:52] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-27 17:42:52] INFO [do_excel.py, 132] 修改login.xlsx成功：(4,6)=PASS
+[2020-07-27 17:42:52] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-27 17:42:52] INFO [do_excel.py, 132] 修改login.xlsx成功：(4,8)=2020-07-27 17:42:52
+[2020-07-27 17:42:52] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-27 17:42:52] INFO [test_api_demo.py, 154] 
+[2020-07-27 17:42:52] INFO [test_api_demo.py, 27] 
+[2020-07-27 17:42:52] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-27 17:42:53] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-27 17:42:53] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-27 17:42:53] INFO [do_excel.py, 132] 修改login.xlsx成功：(5,6)=PASS
+[2020-07-27 17:42:53] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-27 17:42:53] INFO [do_excel.py, 132] 修改login.xlsx成功：(5,8)=2020-07-27 17:42:53
+[2020-07-27 17:42:53] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-27 17:42:53] INFO [test_api_demo.py, 154] 
+[2020-07-27 17:42:53] INFO [test_api_demo.py, 27] 
+[2020-07-27 17:42:53] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-27 17:42:53] INFO [test_api_demo.py, 81] 执行proceed：['my_setattr("access-token",response["data"]["access-token"])', 'my_setattr("userId",response["data"]["userId"])']
+[2020-07-27 17:42:53] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-27 17:42:53] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-27 17:42:53] INFO [do_excel.py, 132] 修改login.xlsx成功：(6,6)=PASS
+[2020-07-27 17:42:53] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-27 17:42:53] INFO [do_excel.py, 132] 修改login.xlsx成功：(6,8)=2020-07-27 17:42:53
+[2020-07-27 17:42:53] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-27 17:42:53] INFO [test_api_demo.py, 154] 
+[2020-07-27 17:44:26] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\base_case_data\api_case.xlsx 的 login 表
+[2020-07-27 17:44:26] INFO [do_excel.py, 37] 读取 login 表 - 全部行的 - 用例数据
+[2020-07-27 17:44:26] INFO [do_excel.py, 94] 读取Excel - 反值：[
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "login",
+    "case_name": "get_csv(\"userName\")",
+    "url": "https://mobile-test.qingzhuyun.com/api/mobile/login",
+    "method": "post",
+    "header": "",
+    "data": "{\"userName\":get_csv(\"userName\"),\"password\": get_csv(\"password\")}",
+    "files": "",
+    "sql": "",
+    "msg": "成功",
+    "result": "",
+    "proceed": "",
+    "tester": "mua~222",
+    "testtime": ""
+  }
+]
+[2020-07-27 17:44:26] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-27 17:44:26] INFO [do_excel.py, 37] 读取 login 表 - 全部行的 - 用例数据
+[2020-07-27 17:44:26] INFO [do_excel.py, 94] 读取Excel - 反值：[
+  {
+    "case_name": "错误用户名登录",
+    "userName": "12",
+    "password": "${my_md5(\"123456\")}",
+    "proceed": "",
+    "msg": "用户名或密码错误",
+    "result": "PASS",
+    "tester": "",
+    "testtime": "2020-07-27 17:42:52"
+  },
+  {
+    "case_name": "错误密码登录",
+    "userName": "1234",
+    "password": "${my_md5(\"1234\")}",
+    "proceed": "",
+    "msg": "用户名或密码错误",
+    "result": "PASS",
+    "tester": "",
+    "testtime": "2020-07-27 17:42:52"
+  },
+  {
+    "case_name": "空用户名登录",
+    "userName": "",
+    "password": "${my_md5(\"123456\")}",
+    "proceed": "",
+    "msg": "无效的参数",
+    "result": "PASS",
+    "tester": "",
+    "testtime": "2020-07-27 17:42:52"
+  },
+  {
+    "case_name": "空密码登录",
+    "userName": "1234",
+    "password": "",
+    "proceed": "",
+    "msg": "无效的参数",
+    "result": "PASS",
+    "tester": "",
+    "testtime": "2020-07-27 17:42:53"
+  },
+  {
+    "case_name": "正常登录",
+    "userName": "13290021660",
+    "password": "${my_md5(\"123456\")}",
+    "proceed": "[${my_setattr(\"access-token\",response[\"data\"][\"access-token\"])},${my_setattr(\"userId\",response[\"data\"][\"userId\"])}]",
+    "msg": "成功",
+    "result": "PASS",
+    "tester": "",
+    "testtime": "2020-07-27 17:42:53"
+  }
+]
+[2020-07-27 17:44:26] INFO [get_case_data.py, 73] 获取到的用例数据：[
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0001_login",
+    "case_name": "12",
+    "url": "https://mobile-test.qingzhuyun.com/api/mobile/login",
+    "method": "post",
+    "header": "",
+    "data": {
+      "userName": "12",
+      "password": "${my_md5(\"123456\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "用户名或密码错误",
+    "result": "PASS",
+    "proceed": "",
+    "tester": "",
+    "testtime": "2020-07-27 17:42:52",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0002_login",
+    "case_name": "1234",
+    "url": "https://mobile-test.qingzhuyun.com/api/mobile/login",
+    "method": "post",
+    "header": "",
+    "data": {
+      "userName": "1234",
+      "password": "${my_md5(\"1234\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "用户名或密码错误",
+    "result": "PASS",
+    "proceed": "",
+    "tester": "",
+    "testtime": "2020-07-27 17:42:52",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0003_login",
+    "case_name": "",
+    "url": "https://mobile-test.qingzhuyun.com/api/mobile/login",
+    "method": "post",
+    "header": "",
+    "data": {
+      "userName": "",
+      "password": "${my_md5(\"123456\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "无效的参数",
+    "result": "PASS",
+    "proceed": "",
+    "tester": "",
+    "testtime": "2020-07-27 17:42:52",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0004_login",
+    "case_name": "1234",
+    "url": "https://mobile-test.qingzhuyun.com/api/mobile/login",
+    "method": "post",
+    "header": "",
+    "data": {
+      "userName": "1234",
+      "password": ""
+    },
+    "files": "",
+    "sql": "",
+    "msg": "无效的参数",
+    "result": "PASS",
+    "proceed": "",
+    "tester": "",
+    "testtime": "2020-07-27 17:42:53",
+    "sheet_name": "login"
+  },
+  {
+    "csv_loop": "login.xlsx/login",
+    "case_id": "0005_login",
+    "case_name": "13290021660",
+    "url": "https://mobile-test.qingzhuyun.com/api/mobile/login",
+    "method": "post",
+    "header": "",
+    "data": {
+      "userName": "13290021660",
+      "password": "${my_md5(\"123456\")}"
+    },
+    "files": "",
+    "sql": "",
+    "msg": "成功",
+    "result": "PASS",
+    "proceed": "[${my_setattr(\"access-token\",response[\"data\"][\"access-token\"])},${my_setattr(\"userId\",response[\"data\"][\"userId\"])}]",
+    "tester": "",
+    "testtime": "2020-07-27 17:42:53",
+    "sheet_name": "login"
+  }
+]
+[2020-07-27 17:44:26] INFO [test_api_demo.py, 27] 
+[2020-07-27 17:44:26] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-27 17:44:26] ERROR [test_api_demo.py, 90] '用户名或密码错误' not found in '{"code": 19999999, "data": null, "msg": "Content type \'application/octet-stream\' not supported"}'
+[2020-07-27 17:44:26] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-27 17:44:26] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-27 17:44:26] INFO [do_excel.py, 132] 修改login.xlsx成功：(2,6)=FAIL
+[2020-07-27 17:44:26] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-27 17:44:26] INFO [do_excel.py, 132] 修改login.xlsx成功：(2,8)=2020-07-27 17:44:26
+[2020-07-27 17:44:26] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-27 17:44:26] INFO [test_api_demo.py, 154] 
+[2020-07-27 17:44:26] INFO [test_api_demo.py, 27] 
+[2020-07-27 17:44:26] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-27 17:44:27] ERROR [test_api_demo.py, 90] '用户名或密码错误' not found in '{"code": 19999999, "data": null, "msg": "Content type \'application/octet-stream\' not supported"}'
+[2020-07-27 17:44:27] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-27 17:44:27] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-27 17:44:27] INFO [do_excel.py, 132] 修改login.xlsx成功：(3,6)=FAIL
+[2020-07-27 17:44:27] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-27 17:44:27] INFO [do_excel.py, 132] 修改login.xlsx成功：(3,8)=2020-07-27 17:44:27
+[2020-07-27 17:44:27] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-27 17:44:27] INFO [test_api_demo.py, 154] 
+[2020-07-27 17:44:27] INFO [test_api_demo.py, 27] 
+[2020-07-27 17:44:27] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-27 17:44:27] ERROR [test_api_demo.py, 90] '无效的参数' not found in '{"code": 19999999, "data": null, "msg": "Content type \'application/octet-stream\' not supported"}'
+[2020-07-27 17:44:27] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-27 17:44:27] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-27 17:44:27] INFO [do_excel.py, 132] 修改login.xlsx成功：(4,6)=FAIL
+[2020-07-27 17:44:27] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-27 17:44:27] INFO [do_excel.py, 132] 修改login.xlsx成功：(4,8)=2020-07-27 17:44:27
+[2020-07-27 17:44:27] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-27 17:44:27] INFO [test_api_demo.py, 154] 
+[2020-07-27 17:44:27] INFO [test_api_demo.py, 27] 
+[2020-07-27 17:44:27] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-27 17:44:27] ERROR [test_api_demo.py, 90] '无效的参数' not found in '{"code": 19999999, "data": null, "msg": "Content type \'application/octet-stream\' not supported"}'
+[2020-07-27 17:44:27] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-27 17:44:27] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-27 17:44:27] INFO [do_excel.py, 132] 修改login.xlsx成功：(5,6)=FAIL
+[2020-07-27 17:44:27] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-27 17:44:27] INFO [do_excel.py, 132] 修改login.xlsx成功：(5,8)=2020-07-27 17:44:27
+[2020-07-27 17:44:27] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-27 17:44:27] INFO [test_api_demo.py, 154] 
+[2020-07-27 17:44:27] INFO [test_api_demo.py, 27] 
+[2020-07-27 17:44:27] INFO [test_api_demo.py, 28] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-27 17:44:27] INFO [test_api_demo.py, 81] 执行proceed：['my_setattr("access-token",response["data"]["access-token"])', 'my_setattr("userId",response["data"]["userId"])']
+[2020-07-27 17:44:27] ERROR [test_api_demo.py, 90] 'NoneType' object is not subscriptable
+[2020-07-27 17:44:27] INFO [test_api_demo.py, 94] --------------------> 对Excel写入测试结果 <--------------------
+[2020-07-27 17:44:27] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-27 17:44:27] INFO [do_excel.py, 132] 修改login.xlsx成功：(6,6)=FAIL
+[2020-07-27 17:44:27] INFO [do_excel.py, 13] 打开 D:\study\other\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-07-27 17:44:27] INFO [do_excel.py, 132] 修改login.xlsx成功：(6,8)=2020-07-27 17:44:27
+[2020-07-27 17:44:27] INFO [test_api_demo.py, 153] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-07-27 17:44:27] INFO [test_api_demo.py, 154] 

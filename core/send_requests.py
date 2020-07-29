@@ -1,15 +1,7 @@
 import unittest
 import requests
 import json
-<<<<<<< HEAD
-from core.my_logger import MyLog
-from utils.common import *
-
-ll562 = MyLog(get_module_name())
-log_me7634 = ll562.get_logger()
-=======
-from core.my_log import log
->>>>>>> origin/master
+from core.my_logger import log
 
 
 class BaseCse(unittest.TestCase):
@@ -29,9 +21,13 @@ class BaseCse(unittest.TestCase):
             request_header = header
             request_data = data
             # 组装上传文件的参数
-            if files is None:
+            if files is None or files == "" or files == '':
                 pass
             else:
+                if isinstance(files, str):  # 提升输入格式的容错
+                    files = eval(files)
+                elif isinstance(files, list):
+                    files = files
                 for i in files:
                     param_name = i[0]
                     upload_file = i[1]
@@ -40,7 +36,7 @@ class BaseCse(unittest.TestCase):
                     request_file.append((param_name, (upload_file_name, open(upload_file, 'rb'), param_type)))
 
             # 提升容错性，转换格式
-            if header is None:
+            if header is None or header == "" or header == '':
                 request_header = None
             elif isinstance(header, dict):
                 pass
@@ -51,19 +47,19 @@ class BaseCse(unittest.TestCase):
             if method.lower() == 'get':
                 res = requests.get(url=url,
                                    headers=request_header,
-                                   params=request_data,
+                                   params=request_data.encode("utf-8"),
                                    files=request_file,
                                    verify=False).json()
             elif method.lower() == 'post' and len(request_file) == 0:
                 res = requests.post(url=url,
                                     headers=request_header,
-                                    data=request_data,
+                                    data=json.dumps(request_data).encode("utf-8"),
                                     files=request_file,
                                     verify=False).json()
             elif method.lower() == 'post' and len(request_file) > 0:
                 res = requests.post(url=url,
                                     headers=request_header,
-                                    data=eval(request_data),
+                                    data=request_data,
                                     files=request_file,
                                     verify=False).json()
             else:
@@ -71,5 +67,5 @@ class BaseCse(unittest.TestCase):
                 self.fail('目前只支持 get、post 两种请求方式。')
             return json.dumps(res, indent=2, ensure_ascii=False, sort_keys=True)
         except Exception as e:
-            log.error('接口请求失败：{}'.format(e))
-            self.fail('{0} 接口请求失败：{1}'.format(url, e))
+            log.error('{0} 接口请求失败：{1}'.format(url, e))
+            raise Exception
