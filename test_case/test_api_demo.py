@@ -6,7 +6,7 @@ from config.PATH import *
 import ddt
 from core.do_excel import DoExcel
 from core.send_requests import BaseCse
-# from core.my_logger import CaseLogModule
+from core.print_module import print_module
 from core.my_logger import log
 from utils.my_functions import *
 from utils.get_case_data import GetCaseData
@@ -40,11 +40,6 @@ class TestApiDemo(BaseCse):
 
             # 请求header
             header = deal_function_data(data1['header'])
-            # print(header)
-            # if header != "":
-            #     header = json.loads(json.dumps(eval(header)))
-            # else:
-            #     header = header
 
             # 请求data
             data = deal_function_data(data1['data'])
@@ -59,22 +54,22 @@ class TestApiDemo(BaseCse):
             proceed = get_str(data1['proceed'])
 
             # 打印日志
-            # CaseLogModule.case_log_module_request(case_id, case_name, url, method, header, new_data)
-            print('用例ID：{}'.format(case_id))
-            print('用例name：{}'.format(case_name))
-            print('请求url：{}'.format(url))
-            print('请求method：{}'.format(method))
-            print('请求header：{}'.format(header))
-            print('请求data：{}'.format(data))
-            print('请求files：{}'.format(files))
+            print_list1 = ['用例ID：{}'.format(case_id),
+                           '用例name：{}'.format(case_name),
+                           '请求url：{}'.format(url),
+                           '请求method：{}'.format(method),
+                           '请求header：{}'.format(header),
+                           '请求data：{}'.format(json.dumps(data)),
+                           '请求files：{}'.format(files)]
+            print_module(print_list1)
 
             # 发送请求
             response = json.loads(self.send_requests(url, method, header, data, files))
 
             # 打印日志
-            # CaseLogModule.case_log_module_response(msg, response, proceed)
-            print('期望结果：{}'.format(msg))
-            print('实际结果：{}'.format(response))
+            print_list2 = [('期望结果：{}'.format(msg)),
+                           ('实际结果：{}'.format(json.dumps(response)))]
+            print_module(print_list2)
 
             # 添加变量，为下一个接口做准备
             if len(proceed) != 0:

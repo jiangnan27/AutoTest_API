@@ -12,6 +12,11 @@ suite = unittest.defaultTestLoader.discover(test_case_path, 'test*.py')
 
 
 def run_suite():
+    if os.path.exists(dir_report):
+        pass
+    else:
+        os.mkdir(dir_report)  # 创建测试日志文件夹
+
     filename = dir_report + "\\" + now + "_result.html"
 
     fp = open(filename, 'wb')
@@ -23,10 +28,7 @@ def run_suite():
     fp.close()  # 关闭报告文件
 
 
-if os.path.exists(dir_report):
-    run_suite()
-else:
-    os.mkdir(dir_report)  # 创建测试日志文件夹
-    run_suite()
+run_suite()
+
 
 

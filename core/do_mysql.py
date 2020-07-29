@@ -72,11 +72,12 @@ class DoMysql:
 
 
 if __name__ == '__main__':
-    d = DoMysql()
-    query_result = d.query_db('SELECT * FROM `class`;')
+    # d = DoMysql()
+    # query_result = d.query_db('SELECT * FROM `class`;')
     # d.update_db('create table `member5` (Test INT (11) COMMENT "测试" NOT NULL) DEFAULT charset = "utf8mb4"')
     # d.update_db('insert into `member5` values (123456)')
     # query_result2 = d.query_db('SELECT * FROM `member5`;')
-    print(query_result)
-    print(type(query_result))
+    # print(query_result)
+    # print(type(query_result))
     # print(type(query_result[0]))
+    pass

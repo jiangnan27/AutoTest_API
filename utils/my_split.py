@@ -1,4 +1,3 @@
-import json
 from utils.my_functions import *
 
 
@@ -49,11 +48,3 @@ def deal_function_data(resource_data: str):
     else:
         new_data = resource_data
     return new_data
-
-
-a = "{\"content-type\": \"application/json\",\"access-token\": ${my_md5(\"access-token\")}}"
-
-
-b = deal_function_data(a)
-print(b)
-

@@ -68,7 +68,8 @@ log = my_logger.get_logger()
 
 
 if __name__ == '__main__':
-    log.debug("输出一个debug")
-    log.info("输出一个info")
-    log.warning("输出一个warning")
-    log.error("输出一个error")
+    # log.debug("输出一个debug")
+    # log.info("输出一个info")
+    # log.warning("输出一个warning")
+    # log.error("输出一个error")
+    pass
