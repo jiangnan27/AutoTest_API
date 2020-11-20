@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>接口自动化测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.3"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    
+<style type="text/css" media="screen">
+body        { font-family: Microsoft YaHei,Tahoma,arial,helvetica,sans-serif;padding: 20px; font-size: 100%; }
+table       { font-size: 100%; }
+
+/* -- heading ---------------------------------------------------------------------- */
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- report ------------------------------------------------------------------------ */
+#total_row  { font-weight: bold; }
+.passCase   { color: #5cb85c; }
+.failCase   { color: #d9534f; font-weight: bold; }
+.errorCase  { color: #f0ad4e; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+</style>
+
+</head>
+<body >
+<div class='heading'>
+<h1 style="font-family: Microsoft YaHei">接口自动化测试报告</h1>
+<p class='attribute'><strong>测试人员 : </strong> QA</p>
+<p class='attribute'><strong>开始时间 : </strong> 2020-11-20 17:13:46</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:00.487383</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 6，失败 1，错误 5，通过率= 0.00%</p>
+
+<p class='description'>执行情况：</p>
+</div>
+
+
+
+<p id='show_detail_line'>
+<a class="btn btn-primary" href='javascript:showCase(4)'>概要{ 0.00% }</a>
+<a class="btn btn-success" href='javascript:showCase(0)'>通过{ 0 }</a>
+<a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 1 }</a>
+<a class="btn btn-warning" href='javascript:showCase(2)'>错误{ 5 }</a>
+<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 6 }</a>
+</p>
+<table id='result_table' class="table table-condensed table-bordered table-hover">
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row' class="text-center active" style="font-weight: bold;font-size: 14px;">
+    <td>用例集/测试用例</td>
+    <td>总计</td>
+    <td>通过</td>
+    <td>失败</td>
+    <td>错误</td>
+    <td>详细</td>
+</tr>
+
+<tr class='warning'>
+    <td>test_api_demo.TestApiDemo</td>
+    <td class="text-center">6</td>
+    <td class="text-center">0</td>
+    <td class="text-center">1</td>
+    <td class="text-center">5</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c1',6)" class="detail" id='c1'>详细</a></td>
+</tr>
+
+<tr id='ft1_1' class='none'>
+    <td class='failCase'><div class='testcase'>test_api_case_1___获取UUID</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起output信息 -Findyou  -->
+    <button id='btn_ft1_1' type="button"  class="btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_1'>失败</button>
+    <div id='div_ft1_1' class="collapse" style="text-align:left">
+
+    <!-- 默认展开output信息 -Findyou
+    <button id='btn_ft1_1' type="button"  class="btn-xs" data-toggle="collapse" data-target='#div_ft1_1'>失败</button>
+    <div id='div_ft1_1' class="collapse in" style="text-align:left">  -->
+    <pre>`
+    
+ft1_1: 
+[2020-11-20 17:13:46] INFO [test_api_demo.py: 25] 
+[2020-11-20 17:13:46] INFO [test_api_demo.py: 26] &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;  用例开始  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+[2020-11-20 17:13:46] INFO [test_api_demo.py: 61] 用例ID：0001_get_uuid
+[2020-11-20 17:13:46] INFO [test_api_demo.py: 62] 用例name：__获取UUID
+[2020-11-20 17:13:46] INFO [test_api_demo.py: 63] 请求url：http://47.105.207.22/prod-api/captchaImage
+[2020-11-20 17:13:46] INFO [test_api_demo.py: 64] 请求method：get
+[2020-11-20 17:13:46] INFO [test_api_demo.py: 65] 请求header：
+[2020-11-20 17:13:46] INFO [test_api_demo.py: 66] 请求param：None
+[2020-11-20 17:13:46] INFO [test_api_demo.py: 67] 请求body：null
+[2020-11-20 17:13:46] INFO [test_api_demo.py: 68] 请求files：
+[2020-11-20 17:13:47] INFO [test_api_demo.py: 74] 期望结果：操作成功
+[2020-11-20 17:13:47] INFO [test_api_demo.py: 75] 实际结果：{
+  "code": 200,
+  "img": "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",
+  "msg": "操作成功",
+  "uuid": "65eb9b35c5e144f8800c58c205b67a36"
+}
+[2020-11-20 17:13:47] INFO [test_api_demo.py: 79] 执行proceed：['my_setattr("uuid",response["uuid"])']
+[2020-11-20 17:13:47] INFO [test_api_demo.py: 91] --------------------&gt; 对Excel写入测试结果 &lt;--------------------
+[2020-11-20 17:13:47] INFO [do_excel.py: 13] 打开 D:\study\Auto\AutoTest_API\test_data\base_case_data\api_case.xlsx 的 login 表
+[2020-11-20 17:13:47] INFO [do_excel.py: 126] 修改api_case.xlsx成功：(2,14)=FAIL
+[2020-11-20 17:13:47] INFO [do_excel.py: 13] 打开 D:\study\Auto\AutoTest_API\test_data\base_case_data\api_case.xlsx 的 login 表
+[2020-11-20 17:13:47] INFO [do_excel.py: 126] 修改api_case.xlsx成功：(2,17)=2020-11-20 17:13:47
+[2020-11-20 17:13:47] INFO [test_api_demo.py: 151] &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;  用例结束  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+[2020-11-20 17:13:47] INFO [test_api_demo.py: 152] 
+Traceback (most recent call last):
+  File "D:\study\Auto\AutoTest_API\test_case\test_api_demo.py", line 81, in test_api_case
+    eval(i)
+  File "&lt;string&gt;", line 1, in &lt;module&gt;
+TypeError: string indices must be integers
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\soft\python3.7.4\lib\site-packages\ddt.py", line 181, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\study\Auto\AutoTest_API\test_case\test_api_demo.py", line 88, in test_api_case
+    self.fail(e)
+AssertionError: string indices must be integers
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='et1_2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_api_case_2___错误用户名登录</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起output信息 -Findyou  -->
+    <button id='btn_et1_2' type="button"  class="btn-xs collapsed" data-toggle="collapse" data-target='#div_et1_2'>错误</button>
+    <div id='div_et1_2' class="collapse" style="text-align:left">
+
+    <!-- 默认展开output信息 -Findyou
+    <button id='btn_et1_2' type="button"  class="btn-xs" data-toggle="collapse" data-target='#div_et1_2'>错误</button>
+    <div id='div_et1_2' class="collapse in" style="text-align:left">  -->
+    <pre>`
+    
+et1_2: 
+[2020-11-20 17:13:47] INFO [test_api_demo.py: 25] 
+[2020-11-20 17:13:47] INFO [test_api_demo.py: 26] &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;  用例开始  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+[2020-11-20 17:13:47] INFO [test_api_demo.py: 151] &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;  用例结束  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+[2020-11-20 17:13:47] INFO [test_api_demo.py: 152] 
+Traceback (most recent call last):
+  File "D:\soft\python3.7.4\lib\site-packages\ddt.py", line 181, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\study\Auto\AutoTest_API\test_case\test_api_demo.py", line 49, in test_api_case
+    body = deal_function_data(data1['body'])
+  File "D:\study\Auto\AutoTest_API\utils\my_split.py", line 37, in deal_function_data
+    result = eval(str(i))
+  File "&lt;string&gt;", line 1, in &lt;module&gt;
+  File "D:\study\Auto\AutoTest_API\utils\my_functions.py", line 30, in my_getattr
+    result = getattr(__AddValue, attr_name)
+AttributeError: type object '__AddValue' has no attribute 'uuid'
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='et1_3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_api_case_3___错误密码登录</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起output信息 -Findyou  -->
+    <button id='btn_et1_3' type="button"  class="btn-xs collapsed" data-toggle="collapse" data-target='#div_et1_3'>错误</button>
+    <div id='div_et1_3' class="collapse" style="text-align:left">
+
+    <!-- 默认展开output信息 -Findyou
+    <button id='btn_et1_3' type="button"  class="btn-xs" data-toggle="collapse" data-target='#div_et1_3'>错误</button>
+    <div id='div_et1_3' class="collapse in" style="text-align:left">  -->
+    <pre>`
+    
+et1_3: 
+[2020-11-20 17:13:47] INFO [test_api_demo.py: 25] 
+[2020-11-20 17:13:47] INFO [test_api_demo.py: 26] &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;  用例开始  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+[2020-11-20 17:13:47] INFO [test_api_demo.py: 151] &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;  用例结束  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+[2020-11-20 17:13:47] INFO [test_api_demo.py: 152] 
+Traceback (most recent call last):
+  File "D:\soft\python3.7.4\lib\site-packages\ddt.py", line 181, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\study\Auto\AutoTest_API\test_case\test_api_demo.py", line 49, in test_api_case
+    body = deal_function_data(data1['body'])
+  File "D:\study\Auto\AutoTest_API\utils\my_split.py", line 37, in deal_function_data
+    result = eval(str(i))
+  File "&lt;string&gt;", line 1, in &lt;module&gt;
+  File "D:\study\Auto\AutoTest_API\utils\my_functions.py", line 30, in my_getattr
+    result = getattr(__AddValue, attr_name)
+AttributeError: type object '__AddValue' has no attribute 'uuid'
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='et1_4' class='none'>
+    <td class='errorCase'><div class='testcase'>test_api_case_4___空用户名登录</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起output信息 -Findyou  -->
+    <button id='btn_et1_4' type="button"  class="btn-xs collapsed" data-toggle="collapse" data-target='#div_et1_4'>错误</button>
+    <div id='div_et1_4' class="collapse" style="text-align:left">
+
+    <!-- 默认展开output信息 -Findyou
+    <button id='btn_et1_4' type="button"  class="btn-xs" data-toggle="collapse" data-target='#div_et1_4'>错误</button>
+    <div id='div_et1_4' class="collapse in" style="text-align:left">  -->
+    <pre>`
+    
+et1_4: 
+[2020-11-20 17:13:47] INFO [test_api_demo.py: 25] 
+[2020-11-20 17:13:47] INFO [test_api_demo.py: 26] &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;  用例开始  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+[2020-11-20 17:13:47] INFO [test_api_demo.py: 151] &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;  用例结束  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+[2020-11-20 17:13:47] INFO [test_api_demo.py: 152] 
+Traceback (most recent call last):
+  File "D:\soft\python3.7.4\lib\site-packages\ddt.py", line 181, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\study\Auto\AutoTest_API\test_case\test_api_demo.py", line 49, in test_api_case
+    body = deal_function_data(data1['body'])
+  File "D:\study\Auto\AutoTest_API\utils\my_split.py", line 37, in deal_function_data
+    result = eval(str(i))
+  File "&lt;string&gt;", line 1, in &lt;module&gt;
+  File "D:\study\Auto\AutoTest_API\utils\my_functions.py", line 30, in my_getattr
+    result = getattr(__AddValue, attr_name)
+AttributeError: type object '__AddValue' has no attribute 'uuid'
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='et1_5' class='none'>
+    <td class='errorCase'><div class='testcase'>test_api_case_5___空密码登录</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起output信息 -Findyou  -->
+    <button id='btn_et1_5' type="button"  class="btn-xs collapsed" data-toggle="collapse" data-target='#div_et1_5'>错误</button>
+    <div id='div_et1_5' class="collapse" style="text-align:left">
+
+    <!-- 默认展开output信息 -Findyou
+    <button id='btn_et1_5' type="button"  class="btn-xs" data-toggle="collapse" data-target='#div_et1_5'>错误</button>
+    <div id='div_et1_5' class="collapse in" style="text-align:left">  -->
+    <pre>`
+    
+et1_5: 
+[2020-11-20 17:13:47] INFO [test_api_demo.py: 25] 
+[2020-11-20 17:13:47] INFO [test_api_demo.py: 26] &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;  用例开始  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+[2020-11-20 17:13:47] INFO [test_api_demo.py: 151] &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;  用例结束  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+[2020-11-20 17:13:47] INFO [test_api_demo.py: 152] 
+Traceback (most recent call last):
+  File "D:\soft\python3.7.4\lib\site-packages\ddt.py", line 181, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\study\Auto\AutoTest_API\test_case\test_api_demo.py", line 49, in test_api_case
+    body = deal_function_data(data1['body'])
+  File "D:\study\Auto\AutoTest_API\utils\my_split.py", line 37, in deal_function_data
+    result = eval(str(i))
+  File "&lt;string&gt;", line 1, in &lt;module&gt;
+  File "D:\study\Auto\AutoTest_API\utils\my_functions.py", line 30, in my_getattr
+    result = getattr(__AddValue, attr_name)
+AttributeError: type object '__AddValue' has no attribute 'uuid'
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='et1_6' class='none'>
+    <td class='errorCase'><div class='testcase'>test_api_case_6___正常登录</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起output信息 -Findyou  -->
+    <button id='btn_et1_6' type="button"  class="btn-xs collapsed" data-toggle="collapse" data-target='#div_et1_6'>错误</button>
+    <div id='div_et1_6' class="collapse" style="text-align:left">
+
+    <!-- 默认展开output信息 -Findyou
+    <button id='btn_et1_6' type="button"  class="btn-xs" data-toggle="collapse" data-target='#div_et1_6'>错误</button>
+    <div id='div_et1_6' class="collapse in" style="text-align:left">  -->
+    <pre>`
+    
+et1_6: 
+[2020-11-20 17:13:47] INFO [test_api_demo.py: 25] 
+[2020-11-20 17:13:47] INFO [test_api_demo.py: 26] &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;  用例开始  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+[2020-11-20 17:13:47] INFO [test_api_demo.py: 151] &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;  用例结束  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+[2020-11-20 17:13:47] INFO [test_api_demo.py: 152] 
+Traceback (most recent call last):
+  File "D:\soft\python3.7.4\lib\site-packages\ddt.py", line 181, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\study\Auto\AutoTest_API\test_case\test_api_demo.py", line 49, in test_api_case
+    body = deal_function_data(data1['body'])
+  File "D:\study\Auto\AutoTest_API\utils\my_split.py", line 37, in deal_function_data
+    result = eval(str(i))
+  File "&lt;string&gt;", line 1, in &lt;module&gt;
+  File "D:\study\Auto\AutoTest_API\utils\my_functions.py", line 30, in my_getattr
+    result = getattr(__AddValue, attr_name)
+AttributeError: type object '__AddValue' has no attribute 'uuid'
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='total_row' class="text-center info">
+    <td>总计</td>
+    <td>6</td>
+    <td>0</td>
+    <td>1</td>
+    <td>5</td>
+    <td>通过率：0.00%</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+    <div style=" position:fixed;right:50px; bottom:30px; width:20px; height:20px;cursor:pointer">
+    <a href="#"><span class="glyphicon glyphicon-eject" style = "font-size:30px;" aria-hidden="true">
+    </span></a></div>
+    
+<script language="javascript" type="text/javascript">
+output_list = Array();
+// 修改按钮颜色显示错误问题 --Findyou v0.8.2.3
+
+$("button[id^='btn_pt']").addClass("btn btn-success");
+$("button[id^='btn_ft']").addClass("btn btn-danger");
+$("button[id^='btn_et']").addClass("btn btn-warning");
+
+/*level
+增加分类并调整，增加error按钮事件 --Findyou v0.8.2.3
+0:Pass    //pt none, ft hiddenRow, et hiddenRow
+1:Failed  //pt hiddenRow, ft none, et hiddenRow
+2:Error    //pt hiddenRow, ft hiddenRow, et none
+3:All     //pt none, ft none, et none
+4:Summary //all hiddenRow
+*/
+
+//add Error button event --Findyou v0.8.2.3
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level == 0 || level == 2 || level == 4 ) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level == 1 || level == 2 || level == 4) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'et') {
+            if (level == 0 || level == 1 || level == 4) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+    }
+
+    //加入【详细】切换文字变化 --Findyou
+    detail_class=document.getElementsByClassName('detail');
+	//console.log(detail_class.length)
+	if (level == 3) {
+		for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="收起"
+		}
+	}
+	else{
+			for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="详细"
+		}
+	}
+}
+
+//add Error button event --Findyou v0.8.2.3
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '_' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        if (!tr) {
+            tid = 'e' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        //修改点击无法收起的BUG，加入【详细】切换文字变化 --Findyou
+        if (toHide) {
+            document.getElementById(tid).className = 'hiddenRow';
+            document.getElementById(cid).innerText = "详细"
+        }
+        else {
+            document.getElementById(tid).className = '';
+            document.getElementById(cid).innerText = "收起"
+        }
+    }
+}
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+</script>
+</body>
+</html>

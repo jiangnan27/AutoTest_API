@@ -9,7 +9,7 @@ from core.send_requests import BaseCse
 # from core.my_logger import CaseLogModule
 from core.my_logger import log
 from utils.my_functions import *
-from utils.get_case_data import GetCaseData
+from core.get_case_data import GetCaseData
 from utils.common import *
 
 

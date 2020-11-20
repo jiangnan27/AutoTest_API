@@ -14,6 +14,9 @@ class DoExcel:
         self.excel = openpyxl.load_workbook(self.filepath)  # 打开Excel
         self.table = self.excel[self.sheet_name]
 
+    # def __del__(self):
+    #     self.excel.close()  # 一定要关闭Excel
+
     def read_excel(self, case_order=None):
         case_data = []
         table = self.table
@@ -27,7 +30,7 @@ class DoExcel:
             case_title.append(cell_value)
 
         # 设置 获取哪些行的数据
-        if case_order == '' or case_order is None:
+        if case_order == '' or case_order is None or case_order == 'null':
             case_order = 'all'  # 默认取  all
         else:
             case_order = case_order
@@ -40,16 +43,11 @@ class DoExcel:
                     break
                 for col in range(max_col):  # 获取一整行的值
                     value = table.cell(row+2, col+1).value  # 获取每一个单元格的value
-                    # log.info('value：{}'.format(value))
-                    # if type(value) == str:
-                    #     case_value.append(value)
+
                     if value is None or value == "" or value == '':
                         case_value.append("")
                     else:
                         case_value.append(value)
-                    # else:
-                    #     case_value.append(eval(value))
-                # print('case_value：', case_value)
 
                 # 看看一整行数据是否为空
                 b_str = ''
@@ -66,20 +64,16 @@ class DoExcel:
             for row2 in case_order:
                 if row2 == max_row:  # 超出了最大行就不再取值了
                     break
+                elif isinstance(row2, str):  # 如果是str，就转成int
+                    row2 = int(row2)
                 log.info('读取 {} 表 - 第{}行的 - 用例数据'.format(self.sheet_name, row2))
                 for col2 in range(max_col):  # 获取一整行的值
                     value = table.cell(row2+1, col2+1).value  # 获取每一个单元格的value
-                    # log.info('value：{}'.format(value))
-                    # log.info('type_value：{}'.format(type(value)))
-                    # if type(value) == str:
+
                     if value is None or value == "" or value == '':
                         case_value.append("")
                     else:
                         case_value.append(value)
-                    # elif value is None:
-                    #     case_value.append("")
-                    # else:
-                    #     case_value.append(eval(value))
 
                 # 看看一整行数据是否为空
                 b_str = ''
@@ -91,7 +85,7 @@ class DoExcel:
                 elif re.sub(r'\s+', "", b_str) == "":
                     log.warning('{0} 表 {1} 整行为空，这一整行不纳入获取结果，请知悉。'.format(self.sheet_name, row2+1))
                     continue
-        log.info('读取Excel - 反值：{}'.format(json.dumps(case_data, indent=2, ensure_ascii=False)))
+        # log.info('读取Excel - 反值：{}'.format(json.dumps(case_data, indent=2, ensure_ascii=False)))
         return case_data
 
     def write_excel(self, value, row_n, col_n=None):
@@ -109,7 +103,7 @@ class DoExcel:
             # 定义字体格式
             font_green = Font(name='宋体', color=colors.GREEN, bold=True)  # 绿色
             font_red = Font(name='宋体', color=colors.RED, bold=True)  # 红色
-            font_dark_yellow = Font(name='宋体', color=colors.DARKYELLOW, bold=True)  # 暗黄色
+            # font_dark_yellow = Font(name='宋体', color=colors.DARKYELLOW, bold=True)  # 暗黄色
             # align = Alignment(horizontal='center', vertical='center')  # 居中
             align = Alignment(horizontal='left', vertical='center')  # 居左
 
@@ -132,15 +126,13 @@ class DoExcel:
             log.info('修改{}成功：({},{})={}'.format(os.path.split(self.filepath)[1], row_n, col_n, value))
         except PermissionError:
             log.warning('修改{0}失败：请关闭已经打开的 {0}。'.format(os.path.split(self.filepath)[1]))
-        except KeyError as e:
+        except KeyError:
             log.warning('修改{}失败：没有 {} 表'.format(os.path.split(self.filepath)[1], self.sheet_name))
-        # except Exception as e2:
-        #     log.error(e2)
 
 
 if __name__ == '__main__':
     base_file = r'H:\AutoFramework_Open\AutoTest_API\test_data\base_case_data\api_case.xlsx'
-    case_data = DoExcel(base_file, 'login').read_excel()
+    case_data1 = DoExcel(base_file, 'login').read_excel()
     # case_data = json.dumps(case_data, ensure_ascii=False)
     # w.write_excel('home', 'PASS', 2)
     # w.write_excel('home', 'FAIL', 3)

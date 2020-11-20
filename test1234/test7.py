@@ -1,15 +1,6 @@
-a = "{\"content-type\": \"application/json\",\"access-token\": \"${my_getattr(\"access-token\")}}"
+import sys
 
-
-b = a.split("${my_getattr(\"access-token\")}")
-
-
-print(b)
-
-bb = b[0][-1]
-bbb = b[1][0]
-
-if bb != "\"" and bbb != "\"":
-    print(1111)
+print('ss')
+print(sys.argv[1:])
 
 

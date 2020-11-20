@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>接口自动化测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.3"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    
+<style type="text/css" media="screen">
+body        { font-family: Microsoft YaHei,Tahoma,arial,helvetica,sans-serif;padding: 20px; font-size: 100%; }
+table       { font-size: 100%; }
+
+/* -- heading ---------------------------------------------------------------------- */
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- report ------------------------------------------------------------------------ */
+#total_row  { font-weight: bold; }
+.passCase   { color: #5cb85c; }
+.failCase   { color: #d9534f; font-weight: bold; }
+.errorCase  { color: #f0ad4e; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+</style>
+
+</head>
+<body >
+<div class='heading'>
+<h1 style="font-family: Microsoft YaHei">接口自动化测试报告</h1>
+<p class='attribute'><strong>测试人员 : </strong> QA</p>
+<p class='attribute'><strong>开始时间 : </strong> 2020-11-20 17:08:34</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:02.467168</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 6，通过 6，通过率= 100.00%</p>
+
+<p class='description'>执行情况：</p>
+</div>
+
+
+
+<p id='show_detail_line'>
+<a class="btn btn-primary" href='javascript:showCase(4)'>概要{ 100.00% }</a>
+<a class="btn btn-success" href='javascript:showCase(0)'>通过{ 6 }</a>
+<a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 0 }</a>
+<a class="btn btn-warning" href='javascript:showCase(2)'>错误{ 0 }</a>
+<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 6 }</a>
+</p>
+<table id='result_table' class="table table-condensed table-bordered table-hover">
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row' class="text-center active" style="font-weight: bold;font-size: 14px;">
+    <td>用例集/测试用例</td>
+    <td>总计</td>
+    <td>通过</td>
+    <td>失败</td>
+    <td>错误</td>
+    <td>详细</td>
+</tr>
+
+<tr class='success'>
+    <td>test_api_demo.TestApiDemo</td>
+    <td class="text-center">6</td>
+    <td class="text-center">6</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c1',6)" class="detail" id='c1'>详细</a></td>
+</tr>
+
+<tr id='pt1_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_api_case_1___获取UUID</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起output信息 -Findyou  -->
+    <button id='btn_pt1_1' type="button"  class="btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse" style="text-align:left">
+
+    <!-- 默认展开output信息 -Findyou
+    <button id='btn_pt1_1' type="button"  class="btn-xs" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
+    <div id='div_pt1_1' class="collapse in" style="text-align:left">  -->
+    <pre>`
+    
+pt1_1: {'code': 200, 'img': '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', 'msg': '操作成功', 'uuid': 'c50171aa3c414e12b4d8f49f78293eb2'}
+
+[2020-11-20 17:08:34] INFO [test_api_demo.py: 25] 
+[2020-11-20 17:08:34] INFO [test_api_demo.py: 26] &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;  用例开始  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+[2020-11-20 17:08:34] INFO [test_api_demo.py: 61] 用例ID：0001_get_uuid
+[2020-11-20 17:08:34] INFO [test_api_demo.py: 62] 用例name：__获取UUID
+[2020-11-20 17:08:34] INFO [test_api_demo.py: 63] 请求url：http://47.105.207.22/prod-api/captchaImage
+[2020-11-20 17:08:34] INFO [test_api_demo.py: 64] 请求method：get
+[2020-11-20 17:08:34] INFO [test_api_demo.py: 65] 请求header：
+[2020-11-20 17:08:34] INFO [test_api_demo.py: 66] 请求param：None
+[2020-11-20 17:08:34] INFO [test_api_demo.py: 67] 请求body：null
+[2020-11-20 17:08:34] INFO [test_api_demo.py: 68] 请求files：
+[2020-11-20 17:08:34] INFO [test_api_demo.py: 75] 期望结果：操作成功
+[2020-11-20 17:08:34] INFO [test_api_demo.py: 76] 实际结果：{"code": 200, "img": "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", "msg": "\u64cd\u4f5c\u6210\u529f", "uuid": "c50171aa3c414e12b4d8f49f78293eb2"}
+[2020-11-20 17:08:34] INFO [test_api_demo.py: 80] 执行proceed：['my_setattr("uuid",response["uuid"])']
+[2020-11-20 17:08:34] INFO [test_api_demo.py: 92] --------------------&gt; 对Excel写入测试结果 &lt;--------------------
+[2020-11-20 17:08:34] INFO [do_excel.py: 13] 打开 D:\study\Auto\AutoTest_API\test_data\base_case_data\api_case.xlsx 的 login 表
+[2020-11-20 17:08:34] INFO [do_excel.py: 126] 修改api_case.xlsx成功：(2,14)=PASS
+[2020-11-20 17:08:34] INFO [do_excel.py: 13] 打开 D:\study\Auto\AutoTest_API\test_data\base_case_data\api_case.xlsx 的 login 表
+[2020-11-20 17:08:34] INFO [do_excel.py: 126] 修改api_case.xlsx成功：(2,17)=2020-11-20 17:08:34
+[2020-11-20 17:08:34] INFO [test_api_demo.py: 152] &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;  用例结束  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+[2020-11-20 17:08:34] INFO [test_api_demo.py: 153] 
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_api_case_2___错误用户名登录</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起output信息 -Findyou  -->
+    <button id='btn_pt1_2' type="button"  class="btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
+    <div id='div_pt1_2' class="collapse" style="text-align:left">
+
+    <!-- 默认展开output信息 -Findyou
+    <button id='btn_pt1_2' type="button"  class="btn-xs" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
+    <div id='div_pt1_2' class="collapse in" style="text-align:left">  -->
+    <pre>`
+    
+pt1_2: {'code': 500, 'msg': '用户不存在/密码错误'}
+
+[2020-11-20 17:08:34] INFO [test_api_demo.py: 25] 
+[2020-11-20 17:08:34] INFO [test_api_demo.py: 26] &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;  用例开始  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+[2020-11-20 17:08:34] INFO [test_api_demo.py: 61] 用例ID：0002_login
+[2020-11-20 17:08:34] INFO [test_api_demo.py: 62] 用例name：__错误用户名登录
+[2020-11-20 17:08:34] INFO [test_api_demo.py: 63] 请求url：http://47.105.207.22/prod-api/login
+[2020-11-20 17:08:34] INFO [test_api_demo.py: 64] 请求method：post
+[2020-11-20 17:08:34] INFO [test_api_demo.py: 65] 请求header：{"content-type":"application/json"}
+[2020-11-20 17:08:34] INFO [test_api_demo.py: 66] 请求param：None
+[2020-11-20 17:08:34] INFO [test_api_demo.py: 67] 请求body：{"username": "1390001000111", "password": 123456, "uuid": "c50171aa3c414e12b4d8f49f78293eb2"}
+[2020-11-20 17:08:34] INFO [test_api_demo.py: 68] 请求files：
+[2020-11-20 17:08:35] INFO [test_api_demo.py: 75] 期望结果：用户不存在/密码错误
+[2020-11-20 17:08:35] INFO [test_api_demo.py: 76] 实际结果：{"code": 500, "msg": "\u7528\u6237\u4e0d\u5b58\u5728/\u5bc6\u7801\u9519\u8bef"}
+[2020-11-20 17:08:35] INFO [test_api_demo.py: 92] --------------------&gt; 对Excel写入测试结果 &lt;--------------------
+[2020-11-20 17:08:35] INFO [do_excel.py: 13] 打开 D:\study\Auto\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-11-20 17:08:35] INFO [do_excel.py: 126] 修改login.xlsx成功：(2,7)=PASS
+[2020-11-20 17:08:35] INFO [do_excel.py: 13] 打开 D:\study\Auto\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-11-20 17:08:35] INFO [do_excel.py: 126] 修改login.xlsx成功：(2,9)=2020-11-20 17:08:35
+[2020-11-20 17:08:35] INFO [test_api_demo.py: 152] &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;  用例结束  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+[2020-11-20 17:08:35] INFO [test_api_demo.py: 153] 
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_api_case_3___错误密码登录</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起output信息 -Findyou  -->
+    <button id='btn_pt1_3' type="button"  class="btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
+    <div id='div_pt1_3' class="collapse" style="text-align:left">
+
+    <!-- 默认展开output信息 -Findyou
+    <button id='btn_pt1_3' type="button"  class="btn-xs" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
+    <div id='div_pt1_3' class="collapse in" style="text-align:left">  -->
+    <pre>`
+    
+pt1_3: {'code': 500, 'msg': '用户不存在/密码错误'}
+
+[2020-11-20 17:08:35] INFO [test_api_demo.py: 25] 
+[2020-11-20 17:08:35] INFO [test_api_demo.py: 26] &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;  用例开始  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+[2020-11-20 17:08:35] INFO [test_api_demo.py: 61] 用例ID：0003_login
+[2020-11-20 17:08:35] INFO [test_api_demo.py: 62] 用例name：__错误密码登录
+[2020-11-20 17:08:35] INFO [test_api_demo.py: 63] 请求url：http://47.105.207.22/prod-api/login
+[2020-11-20 17:08:35] INFO [test_api_demo.py: 64] 请求method：post
+[2020-11-20 17:08:35] INFO [test_api_demo.py: 65] 请求header：{"content-type":"application/json"}
+[2020-11-20 17:08:35] INFO [test_api_demo.py: 66] 请求param：None
+[2020-11-20 17:08:35] INFO [test_api_demo.py: 67] 请求body：{"username": "13900010001", "password": "df123456", "uuid": "c50171aa3c414e12b4d8f49f78293eb2"}
+[2020-11-20 17:08:35] INFO [test_api_demo.py: 68] 请求files：
+[2020-11-20 17:08:35] INFO [test_api_demo.py: 75] 期望结果：用户不存在/密码错误
+[2020-11-20 17:08:35] INFO [test_api_demo.py: 76] 实际结果：{"code": 500, "msg": "\u7528\u6237\u4e0d\u5b58\u5728/\u5bc6\u7801\u9519\u8bef"}
+[2020-11-20 17:08:35] INFO [test_api_demo.py: 92] --------------------&gt; 对Excel写入测试结果 &lt;--------------------
+[2020-11-20 17:08:35] INFO [do_excel.py: 13] 打开 D:\study\Auto\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-11-20 17:08:35] INFO [do_excel.py: 126] 修改login.xlsx成功：(3,7)=PASS
+[2020-11-20 17:08:35] INFO [do_excel.py: 13] 打开 D:\study\Auto\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-11-20 17:08:35] INFO [do_excel.py: 126] 修改login.xlsx成功：(3,9)=2020-11-20 17:08:35
+[2020-11-20 17:08:35] INFO [test_api_demo.py: 152] &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;  用例结束  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+[2020-11-20 17:08:35] INFO [test_api_demo.py: 153] 
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_api_case_4___空用户名登录</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起output信息 -Findyou  -->
+    <button id='btn_pt1_4' type="button"  class="btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_4'>通过</button>
+    <div id='div_pt1_4' class="collapse" style="text-align:left">
+
+    <!-- 默认展开output信息 -Findyou
+    <button id='btn_pt1_4' type="button"  class="btn-xs" data-toggle="collapse" data-target='#div_pt1_4'>通过</button>
+    <div id='div_pt1_4' class="collapse in" style="text-align:left">  -->
+    <pre>`
+    
+pt1_4: {'code': 500, 'msg': '用户不存在/密码错误'}
+
+[2020-11-20 17:08:35] INFO [test_api_demo.py: 25] 
+[2020-11-20 17:08:35] INFO [test_api_demo.py: 26] &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;  用例开始  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+[2020-11-20 17:08:35] INFO [test_api_demo.py: 61] 用例ID：0004_login
+[2020-11-20 17:08:35] INFO [test_api_demo.py: 62] 用例name：__空用户名登录
+[2020-11-20 17:08:35] INFO [test_api_demo.py: 63] 请求url：http://47.105.207.22/prod-api/login
+[2020-11-20 17:08:35] INFO [test_api_demo.py: 64] 请求method：post
+[2020-11-20 17:08:35] INFO [test_api_demo.py: 65] 请求header：{"content-type":"application/json"}
+[2020-11-20 17:08:35] INFO [test_api_demo.py: 66] 请求param：None
+[2020-11-20 17:08:35] INFO [test_api_demo.py: 67] 请求body：{"username": "", "password": 123456, "uuid": "c50171aa3c414e12b4d8f49f78293eb2"}
+[2020-11-20 17:08:35] INFO [test_api_demo.py: 68] 请求files：
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 75] 期望结果：用户不存在/密码错误
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 76] 实际结果：{"code": 500, "msg": "\u7528\u6237\u4e0d\u5b58\u5728/\u5bc6\u7801\u9519\u8bef"}
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 92] --------------------&gt; 对Excel写入测试结果 &lt;--------------------
+[2020-11-20 17:08:36] INFO [do_excel.py: 13] 打开 D:\study\Auto\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-11-20 17:08:36] INFO [do_excel.py: 126] 修改login.xlsx成功：(4,7)=PASS
+[2020-11-20 17:08:36] INFO [do_excel.py: 13] 打开 D:\study\Auto\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-11-20 17:08:36] INFO [do_excel.py: 126] 修改login.xlsx成功：(4,9)=2020-11-20 17:08:36
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 152] &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;  用例结束  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 153] 
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_api_case_5___空密码登录</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起output信息 -Findyou  -->
+    <button id='btn_pt1_5' type="button"  class="btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_5'>通过</button>
+    <div id='div_pt1_5' class="collapse" style="text-align:left">
+
+    <!-- 默认展开output信息 -Findyou
+    <button id='btn_pt1_5' type="button"  class="btn-xs" data-toggle="collapse" data-target='#div_pt1_5'>通过</button>
+    <div id='div_pt1_5' class="collapse in" style="text-align:left">  -->
+    <pre>`
+    
+pt1_5: {'code': 500, 'msg': '用户不存在/密码错误'}
+
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 25] 
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 26] &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;  用例开始  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 61] 用例ID：0005_login
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 62] 用例name：__空密码登录
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 63] 请求url：http://47.105.207.22/prod-api/login
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 64] 请求method：post
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 65] 请求header：{"content-type":"application/json"}
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 66] 请求param：None
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 67] 请求body：{"username": "13900010001", "password": "", "uuid": "c50171aa3c414e12b4d8f49f78293eb2"}
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 68] 请求files：
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 75] 期望结果：用户不存在/密码错误
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 76] 实际结果：{"code": 500, "msg": "\u7528\u6237\u4e0d\u5b58\u5728/\u5bc6\u7801\u9519\u8bef"}
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 92] --------------------&gt; 对Excel写入测试结果 &lt;--------------------
+[2020-11-20 17:08:36] INFO [do_excel.py: 13] 打开 D:\study\Auto\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-11-20 17:08:36] INFO [do_excel.py: 126] 修改login.xlsx成功：(5,7)=PASS
+[2020-11-20 17:08:36] INFO [do_excel.py: 13] 打开 D:\study\Auto\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-11-20 17:08:36] INFO [do_excel.py: 126] 修改login.xlsx成功：(5,9)=2020-11-20 17:08:36
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 152] &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;  用例结束  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 153] 
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt1_6' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_api_case_6___正常登录</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起output信息 -Findyou  -->
+    <button id='btn_pt1_6' type="button"  class="btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_6'>通过</button>
+    <div id='div_pt1_6' class="collapse" style="text-align:left">
+
+    <!-- 默认展开output信息 -Findyou
+    <button id='btn_pt1_6' type="button"  class="btn-xs" data-toggle="collapse" data-target='#div_pt1_6'>通过</button>
+    <div id='div_pt1_6' class="collapse in" style="text-align:left">  -->
+    <pre>`
+    
+pt1_6: {'code': 200, 'msg': '操作成功', 'token': 'eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbl91c2VyX2tleSI6IjY1ZTkxMzQ1LTcyNjItNDRiNS1hY2UyLTc0MWJkODhkNTM4YiJ9.BhpEypGNl48pgDTGdS6a-pe1MxPhNKvySiUc8-FuXrA1Fm_Z6xB6sg_8ezcLF2vyaxTkwe29y_JTjRlGS3ysnQ'}
+
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 25] 
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 26] &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;  用例开始  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 61] 用例ID：0006_login
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 62] 用例name：__正常登录
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 63] 请求url：http://47.105.207.22/prod-api/login
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 64] 请求method：post
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 65] 请求header：{"content-type":"application/json"}
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 66] 请求param：None
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 67] 请求body：{"username": "13900010001", "password": 123456, "uuid": "c50171aa3c414e12b4d8f49f78293eb2"}
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 68] 请求files：
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 75] 期望结果：操作成功
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 76] 实际结果：{"code": 200, "msg": "\u64cd\u4f5c\u6210\u529f", "token": "eyJhbGciOiJIUzUxMiJ9.eyJsb2dpbl91c2VyX2tleSI6IjY1ZTkxMzQ1LTcyNjItNDRiNS1hY2UyLTc0MWJkODhkNTM4YiJ9.BhpEypGNl48pgDTGdS6a-pe1MxPhNKvySiUc8-FuXrA1Fm_Z6xB6sg_8ezcLF2vyaxTkwe29y_JTjRlGS3ysnQ"}
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 80] 执行proceed：['my_setattr("cookie",response["token"])']
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 92] --------------------&gt; 对Excel写入测试结果 &lt;--------------------
+[2020-11-20 17:08:36] INFO [do_excel.py: 13] 打开 D:\study\Auto\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-11-20 17:08:36] INFO [do_excel.py: 126] 修改login.xlsx成功：(6,7)=PASS
+[2020-11-20 17:08:36] INFO [do_excel.py: 13] 打开 D:\study\Auto\AutoTest_API\test_data\csv_case_data\login.xlsx 的 login 表
+[2020-11-20 17:08:36] INFO [do_excel.py: 126] 修改login.xlsx成功：(6,9)=2020-11-20 17:08:36
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 152] &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;  用例结束  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+[2020-11-20 17:08:36] INFO [test_api_demo.py: 153] 
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='total_row' class="text-center info">
+    <td>总计</td>
+    <td>6</td>
+    <td>6</td>
+    <td>0</td>
+    <td>0</td>
+    <td>通过率：100.00%</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+    <div style=" position:fixed;right:50px; bottom:30px; width:20px; height:20px;cursor:pointer">
+    <a href="#"><span class="glyphicon glyphicon-eject" style = "font-size:30px;" aria-hidden="true">
+    </span></a></div>
+    
+<script language="javascript" type="text/javascript">
+output_list = Array();
+// 修改按钮颜色显示错误问题 --Findyou v0.8.2.3
+
+$("button[id^='btn_pt']").addClass("btn btn-success");
+$("button[id^='btn_ft']").addClass("btn btn-danger");
+$("button[id^='btn_et']").addClass("btn btn-warning");
+
+/*level
+增加分类并调整，增加error按钮事件 --Findyou v0.8.2.3
+0:Pass    //pt none, ft hiddenRow, et hiddenRow
+1:Failed  //pt hiddenRow, ft none, et hiddenRow
+2:Error    //pt hiddenRow, ft hiddenRow, et none
+3:All     //pt none, ft none, et none
+4:Summary //all hiddenRow
+*/
+
+//add Error button event --Findyou v0.8.2.3
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level == 0 || level == 2 || level == 4 ) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level == 1 || level == 2 || level == 4) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'et') {
+            if (level == 0 || level == 1 || level == 4) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+    }
+
+    //加入【详细】切换文字变化 --Findyou
+    detail_class=document.getElementsByClassName('detail');
+	//console.log(detail_class.length)
+	if (level == 3) {
+		for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="收起"
+		}
+	}
+	else{
+			for (var i = 0; i < detail_class.length; i++){
+			detail_class[i].innerHTML="详细"
+		}
+	}
+}
+
+//add Error button event --Findyou v0.8.2.3
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '_' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        if (!tr) {
+            tid = 'e' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        //修改点击无法收起的BUG，加入【详细】切换文字变化 --Findyou
+        if (toHide) {
+            document.getElementById(tid).className = 'hiddenRow';
+            document.getElementById(cid).innerText = "详细"
+        }
+        else {
+            document.getElementById(tid).className = '';
+            document.getElementById(cid).innerText = "收起"
+        }
+    }
+}
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+</script>
+</body>
+</html>

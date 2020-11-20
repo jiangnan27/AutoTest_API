@@ -1,9 +1,10 @@
 import pymysql
 from pymysql import OperationalError, cursors
-from core.yamlReader import YamlReader
+from core.yamlHandle import YamlHandle
 from core.my_logger import log
+from config.PATH import YAML
 
-yaml_data = YamlReader().get_data()
+yaml_data = YamlHandle(YAML).read_data()
 host = yaml_data["db_info"]["host"]
 user = yaml_data["db_info"]["user"]
 password = yaml_data["db_info"]["password"]

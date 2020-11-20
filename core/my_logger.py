@@ -2,12 +2,12 @@ import logging
 from config.PATH import *
 import time
 from utils.common import *
-from core.yamlReader import YamlReader
+from core.yamlHandle import YamlHandle
 
 day = time.strftime('%Y-%m-%d', time.localtime(time.time()))
 file = os.path.join(TEST_LOG, '{}.log'.format(day))
 
-yaml_data = YamlReader(YAML).get_data()
+yaml_data = YamlHandle(YAML).read_data()
 
 
 class MyLog:
@@ -58,14 +58,13 @@ class MyLog:
         self.fh.close()
 
 
-my_logger = MyLog(module_name=get_module_name(),
-                  all_level=yaml_data["logger"]["all_level"],
-                  stream_level=yaml_data["logger"]["stream_level"],
-                  file_level=yaml_data["logger"]["file_level"],
-                  all_format=yaml_data["logger"]["all_format"],
-                  date_format=yaml_data["logger"]["date_format"])
-log = my_logger.get_logger()
-
+_my_logger = MyLog(module_name=get_module_name(),
+                   all_level=yaml_data["logger"]["all_level"],
+                   stream_level=yaml_data["logger"]["stream_level"],
+                   file_level=yaml_data["logger"]["file_level"],
+                   all_format=yaml_data["logger"]["all_format"],
+                   date_format=yaml_data["logger"]["date_format"])
+log = _my_logger.get_logger()
 
 if __name__ == '__main__':
     # log.debug("输出一个debug")
