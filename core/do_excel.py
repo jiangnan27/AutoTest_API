@@ -131,8 +131,8 @@ class DoExcel:
 
 
 if __name__ == '__main__':
-    base_file = r'H:\AutoFramework_Open\AutoTest_API\test_data\base_case_data\api_case.xlsx'
-    case_data1 = DoExcel(base_file, 'login').read_excel()
+    # base_file = r'H:\AutoFramework_Open\AutoTest_API\test_data\base_case_data\api_case.xlsx'
+    # case_data1 = DoExcel(base_file, 'login').read_excel()
     # case_data = json.dumps(case_data, ensure_ascii=False)
     # w.write_excel('home', 'PASS', 2)
     # w.write_excel('home', 'FAIL', 3)

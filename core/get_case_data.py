@@ -82,5 +82,6 @@ class GetCaseData:
 
 
 if __name__ == '__main__':
-    result = GetCaseData().get_case_data()
-    print(result)
+    # result = GetCaseData().get_case_data()
+    # print(result)
+    pass
