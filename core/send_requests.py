@@ -1,6 +1,7 @@
 import unittest
 import requests
 import json
+from core.my_logger import log
 
 
 class BaseCse(unittest.TestCase):
@@ -29,15 +30,22 @@ class BaseCse(unittest.TestCase):
             request_file.append((param_name, (upload_file_name, open(upload_file, 'rb'), param_type)))
 
         # 提升容错性，转换格式
-        if header is None or header == "" or header == '':
+        if header is None or header == "" or header == '' or header == 'null':
             request_header = None
-        elif not isinstance(header, dict):
-            request_header = json.loads(header)
+        elif not isinstance(header, dict) and isinstance(header, str):
+            request_header = json.loads(json.dumps(eval(header)))
 
-        if param is None or param == "" or param == '':
+        if param is None or param == "" or param == '' or param == 'null':
             request_param = None
-        elif not isinstance(param, dict):
-            request_param = json.loads(param)
+        elif not isinstance(param, dict) and isinstance(param, str):
+            request_param = json.loads(json.dumps(eval(param)))
+
+        log.info('请求url：{}'.format(url))
+        log.info('请求method：{}'.format(method))
+        log.info('请求header：{}'.format(request_header))
+        log.info('请求param：{}'.format(request_param))
+        log.info('请求body：{}'.format(request_json))
+        log.info('请求files：{}'.format(request_file))
 
         try:
             # 正式发送请求
@@ -67,6 +75,7 @@ class BaseCse(unittest.TestCase):
                                       json=request_json,
                                       files=request_file,
                                       verify=False).json()
+
             return json.dumps(res, indent=2, ensure_ascii=False, sort_keys=True)
         except Exception as e:
             raise Exception('{0} 接口请求失败：{1}'.format(url, e))

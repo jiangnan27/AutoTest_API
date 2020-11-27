@@ -60,12 +60,6 @@ class TestApiDemo(BaseCse):
         # 打印日志
         log.info('用例ID：{}'.format(case_id))
         log.info('用例name：{}'.format(case_name))
-        log.info('请求url：{}'.format(url))
-        log.info('请求method：{}'.format(method))
-        log.info('请求header：{}'.format(header))
-        log.info('请求param：{}'.format(param))
-        log.info('请求body：{}'.format(json.dumps(body)))
-        log.info('请求files：{}'.format(files))
 
         try:
             # 发送请求
