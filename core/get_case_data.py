@@ -1,3 +1,4 @@
+#! /usr/bin/python
 import copy
 import json
 from core.do_excel import DoExcel

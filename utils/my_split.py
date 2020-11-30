@@ -1,3 +1,4 @@
+#! /usr/bin/python
 from utils.my_functions import *
 
 

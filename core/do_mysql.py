@@ -1,3 +1,4 @@
+#! /usr/bin/python
 import pymysql
 from pymysql import OperationalError, cursors
 from core.yamlHandle import YamlHandle

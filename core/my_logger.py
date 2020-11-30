@@ -1,3 +1,4 @@
+#! /usr/bin/python
 import logging
 from config.PATH import *
 import time

@@ -1,3 +1,4 @@
+#! /usr/bin/python
 import hashlib
 import random
 import re

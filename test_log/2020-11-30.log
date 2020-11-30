@@ -1,0 +1,137 @@
+[2020-11-30 16:50:12] INFO [do_excel.py, 14] 打开 D:\study\Auto\AutoTest_API\test_data\base_case_data\api_case.xlsx 的 bbs 表
+[2020-11-30 16:50:12] INFO [do_excel.py, 41] 读取 bbs 表 - 全部行的 - 用例数据
+[2020-11-30 16:50:12] INFO [do_excel.py, 14] 打开 D:\study\Auto\AutoTest_API\test_data\csv_case_data\login.xlsx 的 bbs 表
+[2020-11-30 16:50:12] INFO [do_excel.py, 41] 读取 bbs 表 - 全部行的 - 用例数据
+[2020-11-30 16:50:12] INFO [test_api_demo.py, 26] 
+[2020-11-30 16:50:12] INFO [test_api_demo.py, 27] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-11-30 16:50:12] INFO [test_api_demo.py, 62] 用例ID：0001_bbs_001
+[2020-11-30 16:50:12] INFO [test_api_demo.py, 63] 用例name：存储空间管理_判断存储空间是否存在_正常
+[2020-11-30 16:50:12] INFO [send_requests.py, 44] 请求url：http://10.88.1.39:8088//api/rgw/bucket/isExistBucket
+[2020-11-30 16:50:12] INFO [send_requests.py, 45] 请求method：get
+[2020-11-30 16:50:12] INFO [send_requests.py, 46] 请求header：{'content-type': 'application/json', 'accessKey': 'test', 'SecretKey': 'test'}
+[2020-11-30 16:50:12] INFO [send_requests.py, 47] 请求param：{'bucket': 111}
+[2020-11-30 16:50:12] INFO [send_requests.py, 48] 请求body：None
+[2020-11-30 16:50:12] INFO [send_requests.py, 49] 请求files：[]
+[2020-11-30 16:50:12] INFO [test_api_demo.py, 69] 期望结果：存储空间：111存在！！！
+[2020-11-30 16:50:12] INFO [test_api_demo.py, 70] 实际结果：{'code': 'C00000', 'data': None, 'message': '存储空间：111存在！！！', 'status': True}
+[2020-11-30 16:50:12] INFO [test_api_demo.py, 86] --------------------> 对Excel写入测试结果 <--------------------
+[2020-11-30 16:50:12] INFO [do_excel.py, 14] 打开 D:\study\Auto\AutoTest_API\test_data\csv_case_data\login.xlsx 的 bbs 表
+[2020-11-30 16:50:12] INFO [do_excel.py, 127] 修改login.xlsx成功：(2,6)=PASS
+[2020-11-30 16:50:12] INFO [do_excel.py, 14] 打开 D:\study\Auto\AutoTest_API\test_data\csv_case_data\login.xlsx 的 bbs 表
+[2020-11-30 16:50:12] INFO [do_excel.py, 127] 修改login.xlsx成功：(2,8)=2020-11-30 16:50:12
+[2020-11-30 16:50:12] INFO [test_api_demo.py, 146] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-11-30 16:50:12] INFO [test_api_demo.py, 147] 
+[2020-11-30 16:50:12] INFO [test_api_demo.py, 26] 
+[2020-11-30 16:50:12] INFO [test_api_demo.py, 27] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-11-30 16:50:12] INFO [test_api_demo.py, 62] 用例ID：0002_bbs_001
+[2020-11-30 16:50:12] INFO [test_api_demo.py, 63] 用例name：存储空间管理_判断存储空间是否存在_空的accessKey
+[2020-11-30 16:50:12] INFO [send_requests.py, 44] 请求url：http://10.88.1.39:8088//api/rgw/bucket/isExistBucket
+[2020-11-30 16:50:12] INFO [send_requests.py, 45] 请求method：get
+[2020-11-30 16:50:12] INFO [send_requests.py, 46] 请求header：{'content-type': 'application/json', 'accessKey': '', 'SecretKey': 'error'}
+[2020-11-30 16:50:12] INFO [send_requests.py, 47] 请求param：{'bucket': 111}
+[2020-11-30 16:50:12] INFO [send_requests.py, 48] 请求body：None
+[2020-11-30 16:50:12] INFO [send_requests.py, 49] 请求files：[]
+[2020-11-30 16:50:12] INFO [test_api_demo.py, 69] 期望结果：连接信息-accessKey不能为空
+[2020-11-30 16:50:12] INFO [test_api_demo.py, 70] 实际结果：{'code': 'C00001', 'data': None, 'message': 'isExistBucket.accessKey: 连接信息-accessKey不能为空', 'status': False}
+[2020-11-30 16:50:12] INFO [test_api_demo.py, 86] --------------------> 对Excel写入测试结果 <--------------------
+[2020-11-30 16:50:12] INFO [do_excel.py, 14] 打开 D:\study\Auto\AutoTest_API\test_data\csv_case_data\login.xlsx 的 bbs 表
+[2020-11-30 16:50:12] INFO [do_excel.py, 127] 修改login.xlsx成功：(3,6)=PASS
+[2020-11-30 16:50:12] INFO [do_excel.py, 14] 打开 D:\study\Auto\AutoTest_API\test_data\csv_case_data\login.xlsx 的 bbs 表
+[2020-11-30 16:50:13] INFO [do_excel.py, 127] 修改login.xlsx成功：(3,8)=2020-11-30 16:50:13
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 146] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 147] 
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 26] 
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 27] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 62] 用例ID：0003_bbs_001
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 63] 用例name：存储空间管理_判断存储空间是否存在_错误accessKey
+[2020-11-30 16:50:13] INFO [send_requests.py, 44] 请求url：http://10.88.1.39:8088//api/rgw/bucket/isExistBucket
+[2020-11-30 16:50:13] INFO [send_requests.py, 45] 请求method：get
+[2020-11-30 16:50:13] INFO [send_requests.py, 46] 请求header：{'content-type': 'application/json', 'accessKey': 'test', 'SecretKey': 'error'}
+[2020-11-30 16:50:13] INFO [send_requests.py, 47] 请求param：{'bucket': 111}
+[2020-11-30 16:50:13] INFO [send_requests.py, 48] 请求body：None
+[2020-11-30 16:50:13] INFO [send_requests.py, 49] 请求files：[]
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 69] 期望结果：系统异常！
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 70] 实际结果：{'code': 'C00003', 'data': None, 'message': '系统异常！', 'status': False}
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 86] --------------------> 对Excel写入测试结果 <--------------------
+[2020-11-30 16:50:13] INFO [do_excel.py, 14] 打开 D:\study\Auto\AutoTest_API\test_data\csv_case_data\login.xlsx 的 bbs 表
+[2020-11-30 16:50:13] INFO [do_excel.py, 127] 修改login.xlsx成功：(4,6)=PASS
+[2020-11-30 16:50:13] INFO [do_excel.py, 14] 打开 D:\study\Auto\AutoTest_API\test_data\csv_case_data\login.xlsx 的 bbs 表
+[2020-11-30 16:50:13] INFO [do_excel.py, 127] 修改login.xlsx成功：(4,8)=2020-11-30 16:50:13
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 146] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 147] 
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 26] 
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 27] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 62] 用例ID：0004_bbs_001
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 63] 用例name：存储空间管理_判断存储空间是否存在_空的SecretKey
+[2020-11-30 16:50:13] INFO [send_requests.py, 44] 请求url：http://10.88.1.39:8088//api/rgw/bucket/isExistBucket
+[2020-11-30 16:50:13] INFO [send_requests.py, 45] 请求method：get
+[2020-11-30 16:50:13] INFO [send_requests.py, 46] 请求header：{'content-type': 'application/json', 'accessKey': 'test', 'SecretKey': ''}
+[2020-11-30 16:50:13] INFO [send_requests.py, 47] 请求param：{'bucket': 111}
+[2020-11-30 16:50:13] INFO [send_requests.py, 48] 请求body：None
+[2020-11-30 16:50:13] INFO [send_requests.py, 49] 请求files：[]
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 69] 期望结果：连接信息-secretKey不能为空
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 70] 实际结果：{'code': 'C00001', 'data': None, 'message': 'isExistBucket.secretKey: 连接信息-secretKey不能为空', 'status': False}
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 86] --------------------> 对Excel写入测试结果 <--------------------
+[2020-11-30 16:50:13] INFO [do_excel.py, 14] 打开 D:\study\Auto\AutoTest_API\test_data\csv_case_data\login.xlsx 的 bbs 表
+[2020-11-30 16:50:13] INFO [do_excel.py, 127] 修改login.xlsx成功：(5,6)=PASS
+[2020-11-30 16:50:13] INFO [do_excel.py, 14] 打开 D:\study\Auto\AutoTest_API\test_data\csv_case_data\login.xlsx 的 bbs 表
+[2020-11-30 16:50:13] INFO [do_excel.py, 127] 修改login.xlsx成功：(5,8)=2020-11-30 16:50:13
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 146] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 147] 
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 26] 
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 27] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 62] 用例ID：0005_bbs_001
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 63] 用例name：存储空间管理_判断存储空间是否存在_错误SecretKey
+[2020-11-30 16:50:13] INFO [send_requests.py, 44] 请求url：http://10.88.1.39:8088//api/rgw/bucket/isExistBucket
+[2020-11-30 16:50:13] INFO [send_requests.py, 45] 请求method：get
+[2020-11-30 16:50:13] INFO [send_requests.py, 46] 请求header：{'content-type': 'application/json', 'accessKey': 'error', 'SecretKey': 'test'}
+[2020-11-30 16:50:13] INFO [send_requests.py, 47] 请求param：{'bucket': 111}
+[2020-11-30 16:50:13] INFO [send_requests.py, 48] 请求body：None
+[2020-11-30 16:50:13] INFO [send_requests.py, 49] 请求files：[]
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 69] 期望结果：用户名或密码错误
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 70] 实际结果：{'code': 'C00003', 'data': None, 'message': '用户名或密码错误！！！', 'status': False}
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 86] --------------------> 对Excel写入测试结果 <--------------------
+[2020-11-30 16:50:13] INFO [do_excel.py, 14] 打开 D:\study\Auto\AutoTest_API\test_data\csv_case_data\login.xlsx 的 bbs 表
+[2020-11-30 16:50:13] INFO [do_excel.py, 127] 修改login.xlsx成功：(6,6)=PASS
+[2020-11-30 16:50:13] INFO [do_excel.py, 14] 打开 D:\study\Auto\AutoTest_API\test_data\csv_case_data\login.xlsx 的 bbs 表
+[2020-11-30 16:50:13] INFO [do_excel.py, 127] 修改login.xlsx成功：(6,8)=2020-11-30 16:50:13
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 146] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 147] 
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 26] 
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 27] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 62] 用例ID：0006_bbs_001
+[2020-11-30 16:50:13] INFO [test_api_demo.py, 63] 用例name：存储空间管理_判断存储空间是否存在_不存在的空间
+[2020-11-30 16:50:13] INFO [send_requests.py, 44] 请求url：http://10.88.1.39:8088//api/rgw/bucket/isExistBucket
+[2020-11-30 16:50:13] INFO [send_requests.py, 45] 请求method：get
+[2020-11-30 16:50:13] INFO [send_requests.py, 46] 请求header：{'content-type': 'application/json', 'accessKey': 'test', 'SecretKey': 'test'}
+[2020-11-30 16:50:13] INFO [send_requests.py, 47] 请求param：{'bucket': 'no_exit_space'}
+[2020-11-30 16:50:13] INFO [send_requests.py, 48] 请求body：None
+[2020-11-30 16:50:13] INFO [send_requests.py, 49] 请求files：[]
+[2020-11-30 16:50:14] INFO [test_api_demo.py, 69] 期望结果：存储空间：no_exit_space不存在！！！
+[2020-11-30 16:50:14] INFO [test_api_demo.py, 70] 实际结果：{'code': 'C00000', 'data': None, 'message': '存储空间：no_exit_space不存在！！！', 'status': False}
+[2020-11-30 16:50:14] INFO [test_api_demo.py, 86] --------------------> 对Excel写入测试结果 <--------------------
+[2020-11-30 16:50:14] INFO [do_excel.py, 14] 打开 D:\study\Auto\AutoTest_API\test_data\csv_case_data\login.xlsx 的 bbs 表
+[2020-11-30 16:50:14] INFO [do_excel.py, 127] 修改login.xlsx成功：(7,6)=PASS
+[2020-11-30 16:50:14] INFO [do_excel.py, 14] 打开 D:\study\Auto\AutoTest_API\test_data\csv_case_data\login.xlsx 的 bbs 表
+[2020-11-30 16:50:14] INFO [do_excel.py, 127] 修改login.xlsx成功：(7,8)=2020-11-30 16:50:14
+[2020-11-30 16:50:14] INFO [test_api_demo.py, 146] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-11-30 16:50:14] INFO [test_api_demo.py, 147] 
+[2020-11-30 16:50:14] INFO [test_api_demo.py, 26] 
+[2020-11-30 16:50:14] INFO [test_api_demo.py, 27] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例开始  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-11-30 16:50:14] INFO [test_api_demo.py, 62] 用例ID：0007_bbs_001
+[2020-11-30 16:50:14] INFO [test_api_demo.py, 63] 用例name：存储空间管理_判断存储空间是否存在_不规范的空间名称
+[2020-11-30 16:50:14] INFO [send_requests.py, 44] 请求url：http://10.88.1.39:8088//api/rgw/bucket/isExistBucket
+[2020-11-30 16:50:14] INFO [send_requests.py, 45] 请求method：get
+[2020-11-30 16:50:14] INFO [send_requests.py, 46] 请求header：{'content-type': 'application/json', 'accessKey': 'test', 'SecretKey': 'test'}
+[2020-11-30 16:50:14] INFO [send_requests.py, 47] 请求param：{'bucket': '不回规范的空间名称sadf'}
+[2020-11-30 16:50:14] INFO [send_requests.py, 48] 请求body：None
+[2020-11-30 16:50:14] INFO [send_requests.py, 49] 请求files：[]
+[2020-11-30 16:50:14] INFO [test_api_demo.py, 69] 期望结果：请检查名称是否规范！！！
+[2020-11-30 16:50:14] INFO [test_api_demo.py, 70] 实际结果：{'code': 'C00003', 'data': None, 'message': '请检查名称是否规范！！！', 'status': False}
+[2020-11-30 16:50:14] INFO [test_api_demo.py, 86] --------------------> 对Excel写入测试结果 <--------------------
+[2020-11-30 16:50:14] INFO [do_excel.py, 14] 打开 D:\study\Auto\AutoTest_API\test_data\csv_case_data\login.xlsx 的 bbs 表
+[2020-11-30 16:50:14] INFO [do_excel.py, 127] 修改login.xlsx成功：(8,6)=PASS
+[2020-11-30 16:50:14] INFO [do_excel.py, 14] 打开 D:\study\Auto\AutoTest_API\test_data\csv_case_data\login.xlsx 的 bbs 表
+[2020-11-30 16:50:14] INFO [do_excel.py, 127] 修改login.xlsx成功：(8,8)=2020-11-30 16:50:14
+[2020-11-30 16:50:14] INFO [test_api_demo.py, 146] <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  用例结束  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[2020-11-30 16:50:14] INFO [test_api_demo.py, 147] 
